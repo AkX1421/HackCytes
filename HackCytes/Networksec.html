@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Network Security</title>
+
+    <script type="text/javascript" id="botcopy-embedder-d7lcfheammjct" class="botcopy-embedder-d7lcfheammjct"
+        data-botId="63a9aec7593b0b0008f2650d">
+            var s = document.createElement('script');
+            s.type = 'text/javascript'; s.async = true;
+            s.src = 'https://widget.botcopy.com/js/injection.js';
+            document.getElementById('botcopy-embedder-d7lcfheammjct').appendChild(s);
+        </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" href="https://img.icons8.com/dusk/64/000000/c-drive-2.png">
+    <style>
+        html,
+        body,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: "Roboto", sans-serif
+        }
+
+        #navfix {
+            position: fixed;
+            overflow: auto;
+        }
+
+        .color {
+            background-color: #206604;
+            color: #FFFFFF;
+        }
+
+        .hovering:hover {
+            background-color: #e7ece7;
+            color: #000000;
+        }
+
+        .dec {
+            text-decoration: none;
+        }
+
+        .pad {
+            padding: 10px;
+            margin-top: 100px;
+        }
+
+        div {
+            text-align: justify;
+        }
+    </style>
+</head>
+
+<body class="w3-black">
+    <div class="w3-top">
+        <div class="w3-bar color w3-card">
+
+            <!-- Top fixed navigagtion bar -->
+            <a href="forum/index.php" class=" w3-bar-item dec w3-padding-large hovering w3-right">&nbsp;<i class="fa fa-users"></i>&nbsp;&nbsp;Discussion Forum</a>
+            <a href="Labs/login.php" class=" w3-bar-item dec w3-padding-large hovering w3-right"><i class="fa fa-code"></i>&nbsp;&nbsp;Labs</a>
+            <a href="first.html" class=" w3-bar-item dec w3-padding-large hovering w3-right"><i class="fa fa-home"></i>&nbsp;&nbsp;HOME</a> 
+
+        </div>
+    </div>
+    </div>
+
+
+    <!-- Left side Navigation for the page -->
+    <nav class="w3-sidebar w3-black w3-text-white w3-collapse w3-top w3-large w3-padding"
+        style="z-index:3;width:500px;font-weight:bold;overflow:auto" id="mySidebar"><br>
+        <div class="w3-bar-block">
+            <h2 class="w3-xxxlarge w3-text-green w3-center">Learn Network Security</h2>
+            <br><br>
+            <a href="#Network Security" class="w3-button w3-white w3-round-xxlarge w3-hover-green w3-hover-text-white"
+                style="width: 100%">Network Security</a>
+            <br><br>
+            <a href="#DNS" class="w3-button w3-white w3-round-xxlarge w3-hover-green w3-hover-text-white"
+                style="width: 100%">DNS</a>
+            <br><br>
+            <a href="#Switch, Router, LAN, WAN"
+                class="w3-button w3-white w3-round-xxlarge w3-hover-green w3-hover-text-white"
+                style="width: 100%">Switch, Router, LAN, WAN, </a>
+            <br><br>
+            <a href="#Subnet" class="w3-button w3-white w3-round-xxlarge w3-hover-green w3-hover-text-white"
+                style="width: 100%">Subnet </a>
+            <br><br>
+            <a href="#Firewall" class="w3-button w3-white w3-round-xxlarge w3-hover-green w3-hover-text-white"
+                style="width: 100%">Firewall</a>
+            <br><br>
+            <a href="#Intrusion prevention system"
+                class="w3-button w3-white w3-round-xxlarge w3-hover-green w3-hover-text-white"
+                style="width: 100%">Intrusion prevention system</a>
+            <br><br>
+            <a href="#End point security" class="w3-button w3-white w3-round-xxlarge w3-hover-green w3-hover-text-white"
+                style="width: 100%">End point security </a>
+            <br><br>
+            <a href="#Honey Pot" class="w3-button w3-white w3-round-xxlarge w3-hover-green w3-hover-text-white"
+                style="width: 100%">Honey Pot</a>
+            <br><br>
+            <a href="#Malware detection" class="w3-button w3-white w3-round-xxlarge w3-hover-green w3-hover-text-white"
+                style="width: 100%">Malware detection</a>
+            <br><br>
+            <a href="#Wireless security" class="w3-button w3-white w3-round-xxlarge w3-hover-green w3-hover-text-white"
+                style="width: 100%">Wireless security</a>
+            <br><br>
+            <a href="#Access Management" class="w3-button w3-white w3-round-xxlarge w3-hover-green w3-hover-text-white"
+                style="width: 100%">Access Management </a>
+            <br><br><br><br>
+        </div>
+    </nav>
+
+    <div class="w3-content w3-margin-top" style="max-width:1400px;">
+        <div class="w3-row-padding">
+            <div class="w3-third">
+                <div class="w3-white w3-text-white w3-card-4">
+                    <div class="w3-container">
+                    </div>
+                </div>
+                <br><br>
+            </div>
+            <!-- Right Column -->
+            <div class="w3-twothird">
+
+                <!-- Network Security-->
+                <div id="Network Security">
+                </div>
+                <br><br><br>
+                <div class="w3-container w3-card w3-pale-green w3-margin-bottom">
+                    <h2 class="w3-text-dark-grey w3-padding-16"><i class="fa fa-info-circle"></i>&nbsp;&nbsp;Network
+                        Security</h2>
+                    <div class="w3-container">
+                        <hr>
+                        <hr>
+                        <p class="w3-large w3-text-dark-grey">Network security is the practice of protecting a computer network from unauthorized access, use, disclosure, disruption, modification, or destruction. It involves implementing a range of measures and technologies to prevent unauthorized access to a network and to protect against cyber attacks and other threats.</p>
+                        <p class="w3-large w3-text-dark-grey">There are several types of measures that can be taken to secure a network, including:</p>
+                        <ul>
+                            <li class="w3-text-dark-grey">Firewalls: A firewall is a network security system that monitors and controls incoming and outgoing network traffic based on predetermined security rules.</li>
+                            <li class="w3-text-dark-grey">Encryption: Encrypting data transmitted over a network helps to protect against unauthorized access and interception of data.</li>
+                            <li class="w3-text-dark-grey">Antivirus software: Antivirus software is used to detect and remove malware from a network.</li>
+                            <li class="w3-text-dark-grey">Access controls: Access controls are used to restrict access to a network or certain parts of a network to authorized users only.</li>
+                            <li class="w3-text-dark-grey">Virtual private networks (VPNs): VPNs are used to create a secure, encrypted connection between two or more devices over the internet.</li>
+                            
+                        </ul>
+                 
+
+                            <p class="w3-large w3-text-dark-grey">Effective network security is important for protecting against cyber attacks, data breaches, and other threats, and it is essential for maintaining the confidentiality, integrity, and availability of a network and its resources.</p>
+
+                        <hr>
+                        <hr>
+                    </div>
+                </div>
+
+
+
+
+
+                <!-- DNS -->
+                <div id="DNS">
+                </div>
+                <br><br><br>
+                <div class="w3-container w3-card w3-pale-green">
+                    <h2 class="w3-text-dark-grey w3-padding-16"><i class="fa fa-check-circle"></i>&nbsp;&nbsp;DNS</h2>
+                    <hr>
+                    <hr>
+                   
+                    <p class="w3-large w3-text-dark-grey">Domain Name System (DNS) is a system that is used to translate human-readable domain names into machine-readable IP addresses. DNS is an essential part of the internet, as it allows users to access websites and other online resources using easy-to-remember domain names, rather than having to remember long strings of numbers (IP addresses).</p>
+                    
+                    <p class="w3-large w3-text-dark-grey">DNS works by storing records of domain names and their corresponding IP addresses in a distributed database known as the DNS namespace. When a user types a domain name into their web browser, their computer sends a request to a DNS server to look up the corresponding IP address. The DNS server then returns the IP address to the user's computer, which uses it to establish a connection to the desired website or online resource.</p>
+
+                    <p class="w3-large w3-text-dark-grey">DNS is a decentralized system, which means that there are many DNS servers around the world that work together to provide users with access to websites and other online resources. This helps to ensure that the internet is fast and reliable, as users can access DNS servers that are located close to them.
+
+                    </p>
+                    <hr>
+                    <hr>
+                </div>
+                <br>
+
+
+
+                <!-- Switch, Router, LAN, WAN -->
+                <div id="Switch, Router, LAN, WAN">
+                </div>
+                <br><br><br>
+                <div class="w3-container w3-card w3-pale-green">
+                    <h2 class="w3-text-dark-grey w3-padding-16"><i class="fa fa-stop"></i>&nbsp;&nbsp;Switch, Router,
+                        LAN, WAN</h2>
+                    <hr>
+                    <hr>
+                    <p class="w3-xlarge w3-text-dark-grey">1️⃣ Switch </p>
+                    <p class="w3-large w3-text-dark-grey">➡ A security switch is a hardware device designed to protect
+                        computers, laptops, smartphones and similar devices from unauthorized access or operation,
+                        distinct from a virtual security switch which offers software protection. </p>
+                    <p class="w3-large w3-text-dark-grey">➡ Security switches should be operated by an authorized user
+                        only; for this reason, it should be isolated from other devices in order to prevent unauthorized
+                        access and it should not be possible to bypass it, in order to prevent malicious manipulation.
+                    </p>
+                    <p class="w3-large w3-text-dark-grey">➡ The primary purpose of a security switch is to provide
+                        protection against surveillance, eavesdropping, malware, spyware, and theft of digital devices.
+                        Unlike other protections or techniques, a security switch can provide protection even if
+                        security has already been breached, since it does not have any access from other components and
+                        is not accessible by software. It can additionally disconnect or block peripheral devices, and
+                        perform "man in the middle" operations</p>
+                    <br>
+                    <p class="w3-xlarge w3-text-dark-grey">2️⃣ Router</p>
+                    <p class="w3-large w3-text-dark-grey">➡ A router is a device that connects two or more
+                        packet-switched networks or subnetworks. </p>
+                    <p class="w3-large w3-text-dark-grey">➡ It serves two primary functions: managing traffic between
+                        these networks by forwarding data packets to their intended IP addresses, and allowing multiple
+                        devices to use the same Internet connection.</p>
+                    <br>
+                    <p class="w3-xlarge w3-text-dark-grey">3️⃣ LAN</p>
+                    <p class="w3-large w3-text-dark-grey">➡ There are several types of routers, but most routers pass
+                        data between LANs (local area networks) and WANs (wide area networks). A LAN is a group of
+                        connected devices restricted to a specific geographic area. A LAN usually requires a single
+                        router.</p>
+                    <br>
+                    <p class="w3-xlarge w3-text-dark-grey">4️⃣ WAN</p>
+                    <p class="w3-large w3-text-dark-grey">➡ A WAN, by contrast, is a large network spread out over a
+                        vast geographic area. Large organizations and companies that operate in multiple locations
+                        across the country, for instance, will need separate LANs for each location, which then connect
+                        to the other LANs to form a WAN. Because a WAN is distributed over a large area, it often
+                        necessitates multiple routers and switches.</p>
+                    <p class="w3-large w3-text-dark-grey">➡ Large organizations and companies that operate in multiple
+                        locations across the country, for instance, will need separate LANs for each location, which
+                        then connect to the other LANs to form a WAN. Because a WAN is distributed over a large area, it
+                        often necessitates multiple routers and switches.</p>
+                    <br>
+
+                    <hr>
+                    <hr>
+                </div>
+                <br>
+
+
+
+                <!-- Subnet -->
+                <div id="Subnet">
+                </div>
+                <br><br><br>
+                <div class="w3-container w3-card w3-pale-green">
+                    <h2 class="w3-text-dark-grey w3-padding-16"><i class="fa fa-key"></i>&nbsp;&nbsp;Subnet</h2>
+                    <hr>
+                    <hr>
+                    <p class="w3-large w3-text-dark-grey">A subnet, or subnetwork, is a segmented piece of a larger
+                        network. More specifically, subnets are a logical partition of an IP network into multiple,
+                        smaller network segments. The Internet Protocol (IP) is the method for sending data from one
+                        computer to another over the internet. Each computer, or host, on the internet has at least one
+                        IP address as a unique identifier.</p>
+
+                    <p class="w3-large w3-text-dark-grey">Organizations will use a subnet to subdivide large networks
+                        into smaller, more efficient subnetworks. One goal of a subnet is to split a large network into
+                        a grouping of smaller, interconnected networks to help minimize traffic. This way, traffic
+                        doesn't have to flow through unnecessary routs, increasing network speeds.</p>
+                    <hr>
+                    <hr>
+                </div>
+                <br>
+
+
+                <!-- Firewall -->
+                <div id="Firewall">
+                </div>
+                <br><br><br>
+                <div class="w3-container w3-card w3-pale-green">
+                    <h2 class="w3-text-dark-grey w3-padding-16"><i class="fa fa-table"></i>&nbsp;&nbsp;Firewall</h2>
+                    <hr>
+                    <hr>
+                    
+                    <p class="w3-large w3-text-dark-grey">A firewall is a network security system that monitors and controls incoming and outgoing network traffic based on predetermined security rules. Firewalls are used to prevent unauthorized access to a network and to protect against cyber attacks and other threats.</p>
+                    <p class="w3-large w3-text-dark-grey">There are several types of firewalls, including:</p>
+                    <p class="w3-large w3-text-dark-grey">1. Network firewalls: These firewalls are used to protect a network from external threats and are typically placed at the boundary between the network and the internet.
+<br><br>
+                        2. Host-based firewalls: These firewalls are installed on individual computers or devices and are used to protect them from external threats.
+                        <br><br>
+                        3. Cloud firewalls: These firewalls are used to protect cloud-based resources and are typically managed by the cloud provider.</p>
+                    <p class="w3-large w3-text-dark-grey">Firewalls can be configured to allow or block certain types of traffic based on various criteria, such as the source or destination of the traffic, the port number being used, or the type of traffic (e.g., HTTP or FTP). Firewalls are an important part of an overall security strategy, as they help to protect against cyber attacks and other threats.</p>
+                    <hr>
+                    <hr>
+                </div>
+                <br>
+
+
+                <!-- Intrusion prevention system -->
+                <div id="Intrusion prevention system">
+                </div>
+                <br><br><br>
+                <div class="w3-container w3-card w3-pale-green">
+                    <h2 class="w3-text-dark-grey w3-padding-16"><i class="fa fa-cogs"></i>&nbsp;&nbsp;Intrusion
+                        prevention system</h2>
+                    <hr>
+                    <hr>
+                    <p class="w3-large w3-text-dark-grey">An intrusion prevention system (IPS) is a network security
+                        tool (which can be a hardware device or software) that continuously monitors a network for
+                        malicious activity and takes action to prevent it, including reporting, blocking, or dropping
+                        it, when it does occur.</p>
+
+                    <p class="w3-large w3-text-dark-grey">It is more advanced than an intrusion detection system (IDS),
+                        which simply detects malicious activity but cannot take action against it beyond alerting an
+                        administrator. Intrusion prevention systems are sometimes included as part of a next-generation
+                        firewall (NGFW) or unified threat management (UTM) solution.</p>
+                    <p class="w3-large w3-text-dark-grey">Like many network security technologies, they must be powerful
+                        enough to scan a high volume of traffic without slowing down network performance.</p>
+
+                    <hr>
+                    <hr>
+                </div>
+                <br>
+
+
+                <!-- End point security  -->
+                <div id="End point security">
+                </div>
+                <br><br><br>
+                <div class="w3-container w3-card w3-pale-green">
+                    <h2 class="w3-text-dark-grey w3-padding-16"><i class="fa fa-code"></i>&nbsp;&nbsp;End point security
+                    </h2>
+                    <hr>
+                    <hr>
+                    <p class="w3-large w3-text-dark-grey">Endpoint security is the practice of securing endpoints or
+                        entry points of end-user devices such as desktops, laptops, and mobile devices from being
+                        exploited by malicious actors and campaigns. Endpoint security systems protect these endpoints
+                        on a network or in the cloud from cybersecurity threats. Endpoint security has evolved from
+                        traditional antivirus software to providing comprehensive protection from sophisticated malware
+                        and evolving zero-day threats.</p>
+
+                    <p class="w3-large w3-text-dark-grey">Organizations of all sizes are at risk from nation-states,
+                        hacktivists, organized crime, and malicious and accidental insider threats. Endpoint security is
+                        often seen as cybersecurity's frontline, and represents one of the first places organizations
+                        look to secure their enterprise networks.</p>
+
+                    <p class="w3-large w3-text-dark-grey">As the volume and sophistication of cybersecurity threats have
+                        steadily grown, so has the need for more advanced endpoint security solutions. Today’s endpoint
+                        protection systems are designed to quickly detect, analyze, block, and contain attacks in
+                        progress. To do this, they need to collaborate with each other and with other security
+                        technologies to give administrators visibility into advanced threats to speed detection and
+                        remediation response times.</p>
+
+                    <hr>
+                    <hr>
+                </div>
+                <br>
+
+
+                <!-- Honey Pot -->
+                <div id="Honey Pot">
+                </div>
+                <br><br><br>
+                <div class="w3-container w3-card w3-pale-green">
+                    <h2 class="w3-text-dark-grey w3-padding-16"><i class="fa fa-comment-o"></i>&nbsp;&nbsp;Honey Pot
+                    </h2>
+                    <hr>
+                    <hr>
+                    <p class="w3-large w3-text-dark-grey"> A honeypot is a cybersecurity mechanism that uses a
+                        manufactured attack target to lure cybercriminals away from legitimate targets. They also gather
+                        intelligence about the identity, methods and motivations of adversaries.</p>
+
+                    <p class="w3-large w3-text-dark-grey"> One honeypot definition comes from the world of espionage,
+                        where Mata Hari-style spies who use a romantic relationship as a way to steal secrets are
+                        described as setting a ‘honey trap’ or ‘honeypot’. Often, an enemy spy is compromised by a honey
+                        trap and then forced to hand over everything he/she knows.</p>
+
+                    <p class="w3-large w3-text-dark-grey"> In computer security terms, a cyber honeypot works in a
+                        similar way, baiting a trap for hackers. It's a sacrificial computer system that’s intended to
+                        attract cyberattacks, like a decoy. It mimics a target for hackers, and uses their intrusion
+                        attempts to gain information about cybercriminals and the way they are operating or to distract
+                        them from other targets.</p>
+
+                    <p class="w3-large w3-text-dark-grey">Simple ‘if’ statement :- In a simple ‘if’ statement, a
+                        condition is tested,</p>
+                    <p class="w3-large w3-text-dark-grey">i)If the condition is true, a set of statements are executed.
+                    </p>
+                    <p class="w3-large w3-text-dark-grey">ii)If the condition is false,the statements are not executed
+                        and the program control goes to the next statement that immediately follows the ‘if’ block.</p>
+
+                    <hr>
+                    <hr>
+                </div>
+                <br>
+
+
+                <!-- Malware detection -->
+                <div id="Malware detection">
+                </div>
+                <br><br><br>
+                <div class="w3-container w3-card w3-pale-green">
+                    <h2 class="w3-text-dark-grey w3-padding-16"><i class="fa fa-arrow-down"></i>&nbsp;&nbsp;Malware
+                        detection</h2>
+                    <hr>
+                    <hr>
+                    <p class="w3-large w3-text-dark-grey">Malware is a harmful software that pretends to be a legitimate
+                        program to infiltrate the computer. It is installed in different ways, but the most common are a
+                        phishing email, fake installer, infected attachment, and phishing links.</p>
+                    <p class="w3-large w3-text-dark-grey">Hackers make malware presentable to convince users into
+                        installing them. Often, the users are unaware that the program is malware because it looks
+                        legitimate. Basically, that’s how malware gets installed on the computer.</p>
+
+                    <p class="w3-large w3-text-dark-grey">Once installed, malware hides in different folders in the
+                        computer. If it’s an advanced type of malware, it can directly access the operating system. Then
+                        it starts to encrypt files and record personal information.</p>
+
+                    <p class="w3-large w3-text-dark-grey">Malware detection is the process of scanning the computer and
+                        files to detect malware. It is effective at detecting malware because it involves multiple tools
+                        and approaches. It’s not a one-way process, it’s actually quite complex. The good thing is
+                        malware detection and removal take less than 50 seconds only.</p>
+
+                    <p class="w3-large w3-text-dark-grey">There are three main methods used to malware detection:
+                        Signature based, Behavioural based and Heuristic ones.</p>
+
+                    <hr>
+                    <hr>
+                </div>
+                <br>
+
+
+                <!-- Wireless security -->
+                <div id="Wireless security">
+                </div>
+                <br><br><br>
+                <div class="w3-container w3-card w3-pale-green">
+                    <h2 class="w3-text-dark-grey w3-padding-16"><i class="fa fa-spinner"></i>&nbsp;&nbsp;Wireless
+                        security </h2>
+                    <hr>
+                    <hr>
+                    <p class="w3-large w3-text-dark-grey">Wireless Network provides various comfort to end users but
+                        actually they are very complex in their working. There are many protocols and technologies
+                        working behind to provide a stable connection to users. Data packets traveling through wire
+                        provide a sense of security to users as data traveling through wire probably not heard by
+                        eavesdroppers.</p>
+
+                    <p class="w3-large w3-text-dark-grey">To secure the wireless connection, we should focus on the
+                        following areas –</p>
+                    <p class="w3-large w3-text-dark-grey">• Identify endpoint of wireless network and end-users i.e.,
+                        Authentication.</p>
+                    <p class="w3-large w3-text-dark-grey">• Protecting wireless data packets from middleman i.e.,
+                        Privacy.</p>
+                    <p class="w3-large w3-text-dark-grey">• Keeping the wireless data packets intact i.e., Integrity.
+                    </p>
+
+                    <p class="w3-large w3-text-dark-grey"> We know that wireless clients form an association with Access
+                        Points (AP) and transmit data back and forth over the air. As long as all wireless devices
+                        follow 802.11 standards, they all coexist. But all wireless devices are not friendly and
+                        trustworthy, some rogue devices may be a threat to wireless security. Rogue devices can steal
+                        our important data or can cause the unavailability of the network.</p>
+
+                    <hr>
+                    <hr>
+                </div>
+                <br>
+
+
+                <!-- Access Management   -->
+                <div id="Access Management">
+                </div>
+                <br><br><br>
+                <div class="w3-container w3-card w3-pale-green">
+                    <h2 class="w3-text-dark-grey w3-padding-16"><i class="fa fa-refresh"></i>&nbsp;&nbsp; Access
+                        Management </h2>
+                    <hr>
+                    <hr>
+                    <p class="w3-large w3-text-dark-grey">Businesses use access management solutions to authenticate,
+                        authorize, and audit access to applications and IT systems. Often delivered as a component of an
+                        identity and access management (IAM) solution, access management solutions help strengthen
+                        security and reduce risk by tightly controlling access to on-premises and cloud-based
+                        applications, services, and IT infrastructure. They help ensure the right users have access to
+                        the right resources at the right times for the right reasons. </p>
+
+                    <p class="w3-large w3-text-dark-grey">Most access management solutions include tools for
+                        administering access privileges and tracking logon attempts and access activity. Historically,
+                        access management solutions were delivered as traditional on-premises software applications.
+                    </p>
+
+                    <p class="w3-large w3-text-dark-grey">Today, most businesses leverage Identity as a Service (IDaaS)
+                        offerings that provide cloud agility, simplicity, and economics. Cloud-based access management
+                        solutions help businesses simplify operations, accelerate time-to-value, and gain instant and
+                        infinite scalability.</p>
+                    <hr>
+                    <hr>
+                </div>
+                <br>
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

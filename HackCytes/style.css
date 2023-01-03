@@ -1,0 +1,130 @@
+.block {
+    margin-right: 50px;
+    margin-top: 10px;
+    float: middle;
+}
+
+div {
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+button {
+    border: none;
+    padding: 10 10 10 10;
+    background: #8ff4fc;
+}
+
+body {
+    background-image: linear-gradient(rgb(241, 238, 233), rgb(226, 195, 110));
+}
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+body{
+    caption-side: bottom;
+}
+
+#main {
+    width: 600px;
+    height: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 5px;
+    padding-left: 10px;
+    margin-top: 100px;
+    border-top: 3px double #f1f1f1;
+    border-bottom: 3px double #f1f1f1;
+    padding-top: 94px;
+}
+
+#main table {
+    font-family: "Comic Sans MS", cursive;
+}
+
+/* css code for textbox */
+#main .tb {
+    height: 28px;
+    width: 230px;
+    border: 1px solid #27a465;
+    color: #27a465;
+    font-weight: bold;
+    border-left: 5px solid #f7f7f7;
+    opacity: 0.9;
+}
+
+/* css code for button*/
+#main .btn {
+    width: 80px;
+    height: 32px;
+    outline: none;
+    font-weight: bold;
+    border: 0px solid #e05e13;
+    text-shadow: 0px 0.5px 0.5px #fff;
+    border-radius: 2px;
+    font-weight: 600;
+    color: #e97617;
+    letter-spacing: 1px;
+    font-size: 14px;
+    -webkit-transition: 1s;
+    -moz-transition: 1s;
+    transition: 1s;
+}
+
+#main .btn:hover {
+    background-color: #ec6631;
+    outline: none;
+    border-radius: 2px;
+    color: #f1f1f1;
+    border: 1px solid #f1f1f1;
+}
+
+
+
+
+/* Cards */
+
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  /* Float four columns side by side */
+  .column {
+    float: left;
+    width: 25%;
+    padding: 0 10px;
+  }
+  
+  /* Remove extra left and right margins, due to padding in columns */
+  .row {margin: 0 -5px;}
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Style the counter cards */
+  .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
+    padding: 16px;
+    text-align: center;
+    background-color: #f1f1f1;
+  }
+  
+  /* Responsive columns - one column layout (vertical) on small screens */
+  @media screen and (max-width: 600px) {
+    .column {
+      width: 100%;
+      display: block;
+      margin-bottom: 20px;
+    }
+  }

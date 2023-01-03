@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Application Security</title>
+
+     <script type="text/javascript" id="botcopy-embedder-d7lcfheammjct" class="botcopy-embedder-d7lcfheammjct"
+        data-botId="63a9aec7593b0b0008f2650d">
+            var s = document.createElement('script');
+            s.type = 'text/javascript'; s.async = true;
+            s.src = 'https://widget.botcopy.com/js/injection.js';
+            document.getElementById('botcopy-embedder-d7lcfheammjct').appendChild(s);
+        </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" href="https://img.icons8.com/dusk/64/000000/c-drive-2.png">
+    <style>
+        html,
+        body,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: "Roboto", sans-serif
+        }
+
+        #navfix {
+            position: fixed;
+            overflow: auto;
+        }
+
+        .color {
+            background-color: #206604;
+            color: #FFFFFF;
+        }
+
+        .hovering:hover {
+            background-color: #e7ece7;
+            color: #000000;
+        }
+
+        .dec {
+            text-decoration: none;
+        }
+
+        .pad {
+            padding: 10px;
+            margin-top: 100px;
+        }
+
+        div {
+			text-align: justify;
+		}
+    </style>
+
+
+</head>
+
+<body class="w3-black">
+    <div class="w3-top">
+        <div class="w3-bar color w3-card">
+
+            <!-- Top fixed navigagtion bar -->
+            <a href="./forum/index.php" class=" w3-bar-item dec w3-padding-large hovering w3-right">&nbsp;<i
+                    class="fa fa-users"></i>&nbsp;&nbsp;Discussion Forum</a>
+            <a href="Labs/login.php" class=" w3-bar-item dec w3-padding-large hovering w3-right"><i
+                    class="fa fa-code"></i>&nbsp;&nbsp;Labs</a>
+            <a href="first.html" class=" w3-bar-item dec w3-padding-large hovering w3-right"><i
+                    class="fa fa-home"></i>&nbsp;&nbsp;HOME</a>
+        </div>
+    </div>
+    </div>
+
+
+    <!-- Left side Navigation for the page -->
+    <nav class="w3-sidebar w3-black w3-text-white w3-collapse w3-top w3-large w3-padding"
+        style="z-index:3;width:500px;font-weight:bold;overflow:auto" id="mySidebar"><br>
+        <div class="w3-bar-block">
+            <h2 class="w3-xxxlarge w3-text-green w3-center">Learn Application Security</h2>
+            <br><br>
+            <a href="#Application Security"
+                class="w3-button w3-white w3-round-xxlarge w3-hover-green w3-hover-text-white"
+                style="width: 100%">Application Security</a>
+            <br><br>
+            <a href="#XSS" class="w3-button w3-white w3-round-xxlarge w3-hover-green w3-hover-text-white"
+                style="width: 100%">XSS</a>
+            <br><br>
+            <a href="#SQL Injection" class="w3-button w3-white w3-round-xxlarge w3-hover-green w3-hover-text-white"
+                style="width: 100%">SQL Injection</a>
+            <br><br>
+            <a href="#Google Dorks" class="w3-button w3-white w3-round-xxlarge w3-hover-green w3-hover-text-white"
+                style="width: 100%">Google Dorks</a>
+            <br><br>
+            <a href="#Authentication Bypass"
+                class="w3-button w3-white w3-round-xxlarge w3-hover-green w3-hover-text-white"
+                style="width: 100%">Authentication Bypass </a>
+            <br><br>
+            <a href="#OTP Bypass" class="w3-button w3-white w3-round-xxlarge w3-hover-green w3-hover-text-white"
+                style="width: 100%">OTP Bypass</a>
+            <br><br>
+            <a href="#Rate Limit" class="w3-button w3-white w3-round-xxlarge w3-hover-green w3-hover-text-white"
+                style="width: 100%">Rate Limit </a>
+            <br><br>
+            <a href="#Open Redirect" class="w3-button w3-white w3-round-xxlarge w3-hover-green w3-hover-text-white"
+                style="width: 100%">Open Redirect </a>
+            <br><br>
+            <a href="#CORS" class="w3-button w3-white w3-round-xxlarge w3-hover-green w3-hover-text-white"
+                style="width: 100%">CORS</a>
+            <br><br>
+            <a href="#CSRF" class="w3-button w3-white w3-round-xxlarge w3-hover-green w3-hover-text-white"
+                style="width: 100%">CSRF</a>
+            <br><br>
+            <a href="#EXIF" class="w3-button w3-white w3-round-xxlarge w3-hover-green w3-hover-text-white"
+                style="width: 100%">EXIF </a>
+            <br><br>
+            <a href="#HTML Injection" class="w3-button w3-white w3-round-xxlarge w3-hover-green w3-hover-text-white"
+                style="width: 100%">HTML Injection </a>
+            <br><br>
+            <a href="#Clickjacking" class="w3-button  w3-white w3-round-xxlarge w3-hover-green w3-hover-text-white"
+                style="width: 100%">Clickjacking </a>
+            <br><br>
+            <a href="#SSRF" class="w3-button  w3-white w3-round-xxlarge w3-hover-green w3-hover-text-white"
+                style="width: 100%">SSRF </a>
+            <br><br>
+            <a href="#LFI " class="w3-button  w3-white w3-round-xxlarge w3-hover-green w3-hover-text-white"
+                style="width: 100%">LFI </a>
+            <br><br>
+            <a href="#Subdomain Takeover" class="w3-button w3-white w3-round-xxlarge w3-hover-green w3-hover-text-white"
+                style="width: 100%">Subdomain Takeover </a>
+            <br><br><br><br>
+        </div>
+    </nav>
+
+    <div class="w3-content w3-margin-top" style="max-width:1400px;">
+        <div class="w3-row-padding">
+            <div class="w3-third">
+                <div class="w3-white w3-text-white w3-card-4">
+                    <div class="w3-container">
+                    </div>
+                </div>
+                <br><br>
+            </div>
+            <!-- Right Column -->
+            <div class="w3-twothird">
+
+                <!-- Application Security-->
+                <div id="Application Security">
+                </div>
+                <br><br><br>
+                <div class="w3-container w3-card w3-pale-green w3-margin-bottom">
+                    <h2 class="w3-text-dark-grey w3-padding-16"><i class="fa fa-info-circle"></i>&nbsp;&nbsp;Application
+                        Security</h2>
+                    <div class="w3-container">
+                        <hr>
+                        <hr>
+                        <p class="w3-large w3-text-dark-grey">Application security is the practice of ensuring the confidentiality, integrity, and availability of applications and their data. It involves implementing measures to prevent unauthorized access to applications and their data, as well as protecting against vulnerabilities that could be exploited by attackers.</p>
+                        <p class="w3-large w3-text-dark-grey">Application security can include measures such as:</p>
+                        
+
+1️⃣ <b>Input validation: </b><br> Ensuring that data entered into an application is in the correct format and does not contain any malicious code.
+<br>
+<br>
+2️⃣ <b>Access controls: </b><br> Implementing measures to ensure that only authorized users can access certain features or data within an application.
+<br>
+<br>
+3️⃣ <b>Encryption: </b><br>Protecting data within an application by encoding it so that it can only be accessed by authorized parties.
+<br><br>
+    4️⃣ <b>Security testing:</b><br> Regularly testing applications for vulnerabilities and implementing fixes to address any issues that are identified.
+
+
+    <p class="w3-large w3-text-dark-grey">Effective application security is important because it helps to protect against cyber attacks and data breaches, and it helps to maintain the confidentiality, integrity, and availability of applications and their data.</p>
+                        <hr>
+                        <hr>
+                    </div>
+                </div>
+
+
+                <!-- XSS -->
+                <div id="XSS">
+                </div>
+                <br><br><br>
+                <div class="w3-container w3-card w3-pale-green">
+                    <h2 class="w3-text-dark-grey w3-padding-16"><i class="fa fa-file-code-o"></i>&nbsp;&nbsp;XSS</h2>
+                    <hr>
+                    <hr>
+
+                    <p class="w3-large w3-text-dark-grey"><b>What is XSS?</b></p>
+
+                    <p class="w3-medium w3-text-dark-grey">Cross Site Scripting (XSS) is a vulnerability in a web
+                        application that allows injects malicious code into the vulnerable web application. The
+                        exploitation of XSS against a user can lead to various consequences such as account compromise,
+                        account deletion, privilege escalation, malware infection and many more.
+
+                        Cross site scripting attacks can be broken down into two types: stored and reflected.</p>
+
+
+                        <p class="w3-large w3-text-dark-grey"><b>Types of XSS?</b></p>
+                    <h3 class="w3-text-dark-grey">✔️ Stored XSS: </h3>
+                    <p class="w3-medium w3-text-dark-grey">&nbsp;&nbsp;Stored XSS, also known as persistent XSS, is the
+                        more damaging of the two. It occurs when a malicious script is injected directly into a
+                        vulnerable web application.</p>
+
+                    <div style="background-color:#00083D;padding:20px;">
+                        <p class="w3-large w3-text-dark-grey">&nbsp;&nbsp;&nbsp;&nbsp;
+                            <span
+                                style="color:#e08b3e">https://web-app.com/status?message=&#60;script>/*+malicious+code...+*/&#60;/script>&nbsp;&nbsp;</span>
+                            <br>
+                            <span style="color:#72bcd4">&#60;script>/*+malicious+code...+*/&#60;/script></span>
+                        </p>
+                    </div>
+
+                    <p class="w3-medium w3-text-dark-grey">&nbsp;&nbsp;When a user visits the page, the attacker’s
+                        script executes, and the script now has access to any action or data that the user can access.
+                    </p>
+
+                    <div style="background-color:#00083D;padding:20px;">
+                        <p class="w3-large w3-text-dark-grey">&nbsp;&nbsp;&nbsp;&nbsp;
+                            <span
+                                style="color:#72bcd4">&#8249;&#60;script>alert(document.cookie)&#60;/script>&#8250;</span>
+                        </p>
+                    </div>
+
+                    <div>
+                        <p class="w3-medium">It will be saved in the database and executed on the page load, as the
+                            latest user opinion will be displayed on the page. If a website is vulnerable to XSS, then
+                            the page load popup window with cookies will be displayed. This script is quite simple and
+                            less harmful. However, instead of this script, a more harmful code may be entered.</p>
+
+                        <h3 class="w3-text-dark-grey">✔️ Reflected XSS: </h3>
+
+                        <p class="w3-large w3-text-dark-grey">Reflected XSS involves the reflecting of a malicious
+                            script from a web application, onto a user’s browser. The script is embedded into a link and
+                            is only activated once that link is clicked on.</p>
+
+                        <h3 class="w3-text-dark-grey">✔️ DOM-Based XSS: </h3>
+                        <p class="w3-large w3-text-dark-grey">DOM-based cross-site scripting (client-side XSS) has some
+                            similarity to reflected XSS as damaging script is often delivered through a malicious URL.
+                            However, rather than including the payload in the HTTP response of a trusted site, the
+                            attack is executed entirely in the browser by modifying the DOM or Document Object Model.
+                            This targets the failure of legitimate JavaScript already on the page to properly sanitize
+                            user
+                            input.http://testing.com/book.html?default=&#60;script>alert(document.cookie)&#60;/script>
+
+                            In this Example, the request is sent for the page
+                            book.html?default=&#60;script>alert(document.cookie)&#60;/script> to testing.com. Therefore,
+                            for that page, a DOM object is being created by the browser, where the document location
+                            object will contain the appropriate string.
+                        </p>
+
+                    </div>
+                    <hr>
+                    <hr>
+                </div>
+                <br><br>
+
+
+
+                <!-- SQL Injection -->
+                <div id="SQL Injection">
+                </div>
+                <br><br><br>
+                <div class="w3-container w3-card w3-pale-green">
+                    <h2 class="w3-text-dark-grey w3-padding-16"><i class="fa fa-check-circle"></i>&nbsp;&nbsp;SQL
+                        Injection</h2>
+                    <hr>
+                    <hr>
+                    
+                    <p class="w3-large w3-text-dark-grey">SQL injection is a type of cyber attack that involves injecting malicious code into an application's Structured Query Language (SQL) database. SQL is a programming language that is used to manage and manipulate data in relational database management systems (RDBMS). </p>
+                    
+                    <p class="w3-large w3-text-dark-grey">In a SQL injection attack, an attacker injects malicious code into an application's SQL database by exploiting vulnerabilities in the application's input validation processes. This code is then executed by the database, allowing the attacker to gain unauthorized access to the database and potentially steal or manipulate data.</p>
+                                    <p class="w3-large w3-text-dark-grey">SQL statements by the attacker are designed so that they can
+                        be executed while the webserver is fetching content from the application server. It compromises
+                        the security of a web application.<br>
+                        Example:<br>
+                        12222345 or 1=1.
+                    </p>
+
+                    <p class="w3-large w3-text-dark-grey">So, this basically translates to:<br>
+
+                        SELECT * from STUDENT where <br>
+                        STUDENT-ID == 12222345 or 1 = 1 <br>
+                        Now this 1=1 will return all records for which this holds true. So basically, all the student
+                        data is compromised. Now the malicious user can also delete the student records in a similar
+                        fashion.
+                    </p>
+
+
+                    <hr>
+                    <hr>
+                </div>
+                <br>
+
+
+
+                <!-- Google Dorks -->
+                <div id="Google Dorks">
+                </div>
+                <br><br><br>
+                <div class="w3-container w3-card w3-pale-green">
+                    <h2 class="w3-text-dark-grey w3-padding-16"><i class="fa fa-stop"></i>&nbsp;&nbsp;Google Dorks</h2>
+                    <hr>
+                    <hr>
+                    <p class="w3-large w3-text-dark-grey">Google Dorks are search inquiries specially crafted by
+                        cyberpunks to get sensitive information that is not easily available to the average user. The
+                        technique of looking using these search strings is called Google Dorking, or Google Hacking.</p>
+                    <p class="w3-large w3-text-dark-grey">The Google search box can act in a similar way to a
+                        command-line or an interpreter when provided with the best queries. Simply put, there are
+                        keywords, and drivers, that have special significance to Google.</p>
+                    <p class="w3-large w3-text-dark-grey">Individuals can utilize these drivers to help them find
+                        appropriate outcomes to their search questions in a short amount of time.</p>
+                    <p class="w3-large w3-text-dark-grey">
+                        On the other hand, hackers can also take advantage of these operators to obtain documents
+                        containing passwords, lists of emails, log files, and a lot more.
+                    </p>
+                    <p class="w3-large w3-text-dark-grey">The following example is a google geek question that returns
+                        log data consisting of passwords with email addresses:
+
+                        filetype:log intext:password intext:(@gmail.com | @yahoo.com | @hotmail.com)
+                    </p>
+                    <br>
+                    <hr>
+                    <hr>
+                </div>
+                <br>
+
+
+
+                <!-- Authentication Bypass  -->
+                <div id="Authentication Bypass">
+                </div>
+                <br><br><br>
+                <div class="w3-container w3-card w3-pale-green">
+                    <h2 class="w3-text-dark-grey w3-padding-16"><i class="fa fa-key"></i>&nbsp;&nbsp;Authentication
+                        Bypass </h2>
+                    <hr>
+                    
+                    <p class="w3-large w3-text-dark-grey">Authentication bypass is a type of cyber attack in which an attacker is able to gain access to a system or application without providing the correct credentials. This can be done by exploiting vulnerabilities in the authentication process or by using techniques such as brute force attacks or password cracking.
+                    </p>
+                    <p class="w3-large w3-text-dark-grey"> There are several ways that an attacker might attempt to bypass authentication, such as:</p>
+                    1️⃣ <b>Guessing or cracking passwords </b><br> An attacker might try to guess or crack a user's password in order to gain access to a system or application.
+                    <br>
+                    <br>
+                    2️⃣ <b>Exploiting vulnerabilities in the authentication process:  </b><br> An attacker might look for vulnerabilities in the way that an application or system handles authentication, such as weak passwords or unsecured login pages, and exploit these vulnerabilities to bypass authentication.
+                    <br>
+                    <br>
+                    3️⃣ <b>Using stolen or compromised credentials:  </b><br>An attacker might use stolen or compromised user credentials to gain access to a system or application.
+                    <br><br>
+                     
+                    
+                    <p class="w3-large w3-text-dark-grey"> To prevent authentication bypass attacks, it is important to implement strong authentication measures, such as using strong passwords, enabling two-factor authentication, and regularly updating and patching systems and applications.</p> 
+                        <hr>
+                    <hr>
+                </div>
+                <br>
+
+
+                <!-- OTP Bypass -->
+                <div id="OTP Bypass">
+                </div>
+                <br><br><br>
+                <div class="w3-container w3-card w3-pale-green">
+                    <h2 class="w3-text-dark-grey w3-padding-16"><i class="fa fa-table"></i>&nbsp;&nbsp;OTP Bypass</h2>
+                    <hr>
+                    
+                    
+                    <p class="w3-large w3-text-dark-grey">One-Time Password (OTP) is a type of authentication method that involves the use of a temporary, single-use password to access a system or application. OTP is often used as an additional layer of security in addition to a username and password, to help prevent unauthorized access.</p>
+                    <p class="w3-large w3-text-dark-grey">An OTP bypass attack is a type of cyber attack in which an attacker is able to gain access to a system or application by bypassing the OTP authentication process. This can be done by intercepting the OTP as it is being transmitted, using a stolen or compromised OTP, or by exploiting vulnerabilities in the OTP authentication process.</p>
+                    <p class="w3-large w3-text-dark-grey">To prevent OTP bypass attacks, it is important to implement strong OTP authentication measures, such as using secure communication channels to transmit OTPs and regularly updating and patching systems and applications to fix any vulnerabilities. It is also important to educate users on the importance of keeping their OTPs secure and not sharing them with unauthorized parties.
+
+
+
+
+                    </p>
+                                          <br>
+                    <hr>
+                    <hr>
+                </div>
+                <br>
+
+
+                <!--Rate Limit  -->
+                <div id="Rate Limit">
+                </div>
+                <br><br><br>
+                <div class="w3-container w3-card w3-pale-green">
+                    <h2 class="w3-text-dark-grey w3-padding-16"><i class="fa fa-cogs"></i>&nbsp;&nbsp;Rate Limit </h2>
+                    <hr>
+                    <hr>
+                    <p class="w3-large w3-text-dark-grey">Rate limiting is a process to limit requests possible. It is
+                        used to control network traffic. Suppose a web server allows up to 20 requests per minute. If
+                        you try to send more than 20 requests, an error will be triggered. This is necessary to prevent
+                        the attackers from sending excessive requests to the server.
+                        No rate limit is a flaw that doesn’t limit the no. of attempts one makes on a website server to
+                        extract data. It is a vulnerability which can prove to be critical when misused by attackers.
+                    </p>
+
+                    <p class="w3-xlarge w3-text-dark-grey">&#8594; USES OF RATE LIMITING FEATURE:</p>
+                    <p class="w3-large w3-text-dark-grey">1️⃣ Reduces excessive load on web servers</p>
+
+                    <p class="w3-large w3-text-dark-grey">2️⃣ Prevent DOS (denial of service) attack</p>
+
+                    <p class="w3-large w3-text-dark-grey">3️⃣ Help stop certain kinds of malicious bot activity like
+                        login to an account using multiple guess password and user id</p>
+
+                    <p class="w3-large w3-text-dark-grey">4️⃣ Also prevent brute-force attacks</p>
+
+
+                    <p class="w3-xlarge w3-text-dark-grey">&#8594;How does rate limit work?</p>
+
+                    <p class="w3-large w3-text-dark-grey">Rate limiting runs within an application, rather than running
+                        on the web server itself. Typically, rate limiting is based on tracking the IP addresses that
+                        requests are coming from and tracking how much time elapses between each request. The IP address
+                        is the main way an application identifies who or what is making the request.</p>
+
+                    <p class="w3-large w3-text-dark-grey">A rate limiting solution measures the amount of time between
+                        each request from each IP address and measures the number of requests within a specified
+                        timeframe. If there are too many requests from a single IP within the given timeframe, the rate
+                        limiting solution will not fulfil the IP address's requests for a certain amount of time.</p>
+
+                    <p class="w3-large w3-text-dark-grey">Essentially, a rate-limited application will say, "Hey, slow
+                        down," to unique users that are making requests at a rapid rate. This is comparable to a police
+                        officer who pulls over a driver for exceeding the road's speed limit, or to a parent who tells
+                        their child not to eat so much candy in such a short span of time.</p>
+                    Arithmetic operators are used to perform arithmetic operations.
+
+                    <hr>
+                    <hr>
+                </div>
+                <br>
+
+
+                <!-- Open Redirect -->
+                <div id="Open Redirect">
+                </div>
+                <br><br><br>
+                <div class="w3-container w3-card w3-pale-green">
+                    <h2 class="w3-text-dark-grey w3-padding-16"><i class="fa fa-code"></i>&nbsp;&nbsp;Open Redirect</h2>
+                    <hr>
+                    <hr>
+                    <p class="w3-xlarge w3-text-dark-grey">An open redirect is a security flaw in an application or a
+                        web page that causes URLs to fail to authenticate properly. The open redirect is a failure in
+                        this phase that allows attackers to direct users to malicious websites of third parties.
+                        Open redirection happens when, via a user-controlled input, a web page is redirected to another
+                        URL in another domain. This happens when the program takes user-controlled data to the target of
+                        redirection in an unsafe way.
+                    </p>
+                    <p class="w3-large w3-text-red" style="color: #72bcd4;"><i style="font-size: medium;"
+                            class="fa fa-circle"></i> Common dorks for open redirect</p>
+                    <p class="w3-small w3-text-red">&#8594;Some dorks</p>
+                    <p class="w3-large w3-text-red">&#8594;/{payload}</p>
+                    <p class="w3-large w3-text-red">&#8594;?next=</p>
+                    <p class="w3-large w3-text-red">&#8594;?url=</p>
+                    <p class="w3-large w3-text-red">&#8594;?target=</p>
+                    <p class="w3-large w3-text-red">&#8594;?dest=</p>
+                    <p class="w3-large w3-text-red">&#8594;?destination=</p>
+                    <p class="w3-large w3-text-red">&#8594;?redir=</p>
+                    <p class="w3-large w3-text-red">&#8594;redirect_uri=</p>
+                    <p class="w3-large w3-text-red">&#8594;?redirect_url=</p>
+                    <p class="w3-large w3-text-red">&#8594;?redirect=</p>
+                    <p class="w3-large w3-text-red">&#8594;/redirect/</p>
+                    </p>
+
+                    <p class="w3-large w3-text-black">Automation is possible for checking for open redirect.<br>
+                        Use the following one Liner to test for open redirect.
+                    </p>
+
+                    <p class="w3-large w3-text-black"> gau testphp.vulnweb.com | tee -a archive 1>/dev/null && gf redirect
+                        archive | cut -f 3- -d ‘:’ | qsreplace “https://evil.com” | httpx -silent -status-code -location
+                    </p>
+
+                    <hr>
+                    <hr>
+                </div>
+                <br>
+
+                <!--CORS -->
+                <div id="CORS">
+                </div>
+                <br><br><br>
+                <div class="w3-container w3-card w3-pale-green">
+                    <h2 class="w3-text-dark-grey w3-padding-16"><i class="fa fa-arrow-down"></i>&nbsp;&nbsp;CORS</h2>
+                    <hr>
+                    <hr>
+                    <p class="w3-xlarge w3-text-dark-grey">CORS (Cross-Origin Resource Sharing) is a mechanism by which
+                        data, or any other resource of a site could be shared intentionally to a third-party website
+                        when there is a need. Generally, access to resources that are residing in a third-party site is
+                        restricted by the browser clients for security purposes.</p>
+                    <p class="w3-large w3-text-dark-grey">Client side code to make an HTTP Call would look like below,
+                    </p>
+
+                    <p class="w3-large w3-text-red">This native JavaScript method is intended to make an HTTP call to
+                        the given link urlLink via the GET method and return the response text from the third-party
+                        resource.</p>
+
+                    <p class="w3-xlarge w3-text-dark-grey">Based on the request methods (GET/PUT/POST/DELETE) and the
+                        request headers, the requests are classified into two categories.</p>
+
+
+
+                    <div style="background-color:#00083D;padding:20px;">
+                        <p class="w3-large w3-text-dark-grey">&nbsp;&nbsp;&nbsp;&nbsp;
+                            <span style="color:#e08b3e">function httpGetAction(urlLink)&nbsp;&nbsp;</span>
+                            <span style="color:#72bcd4">&#8249;{&#8250;</span>
+                        </p>
+
+                        <p class="w3-large w3-text-dark-grey">&nbsp;&nbsp;&nbsp;&nbsp;
+                            <span style="color:#ea00ff">var xmlHttp = new XMLHttpRequest();</span>
+
+                        <p class="w3-large w3-text-dark-grey">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+                                style="color:#ea00ff">xmlHttp.open( "GET", urlLink, false ); &nbsp;</span></p>
+                        <p><span style="color:#956b6b">xmlHttp.send();</span></p>
+
+                        <p class="w3-large w3-text-dark-grey">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+                                style="color:#ea00ff">return xmlHttp.responseText;&nbsp;</span></p>
+
+                        <p class="w3-large w3-text-dark-grey">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+                                style="color:#956b6b">}</span></p>
+
+
+                        <hr>
+                        <hr>
+                    </div>
+                    <br>
+                </div>
+
+
+                <!--CSRF -->
+                <div id="CSRF">
+                </div>
+                <br><br><br>
+                <div class="w3-container w3-card w3-pale-green">
+                    <h2 class="w3-text-dark-grey w3-padding-16"><i class="fa fa-arrow-down"></i>&nbsp;&nbsp;CSRF
+                    </h2>
+                    <hr>
+                    <hr>
+                    <p class="w3-large w3-text-dark-grey">Cross-site request forgery (also known as CSRF) is a web
+                        security vulnerability that allows an attacker to induce users to perform actions that they
+                        do not intend to perform. It allows an attacker to partly circumvent the same origin policy,
+                        which is designed to prevent different websites from interfering with each other.
+
+
+                        For a CSRF attack to be possible, three key conditions must be in place:</p>
+                    <p class="w3-large w3-text-dark-grey">
+                        &#8594;A relevant action. There is an action within the application that the attacker has a
+                        reason to induce. This might be a privileged action (such as modifying permissions for other
+                        users) or any action on user-specific data (such as changing the user's own password).
+                    </p>
+                    <p class="w3-large w3-text-dark-grey">Cookie-based session handling. Performing the action
+                        involves issuing one or more HTTP requests, and the application relies solely on session
+                        cookies to identify the user who has made the requests. There is no other mechanism in place
+                        for tracking sessions or validating user requests.</p>
+                    <p class="w3-large w3-text-red">&nbsp;No unpredictable request parameters. The requests that
+                        perform the action do not contain any parameters whose values the attacker cannot determine
+                        or guess. For example, when causing a user to change their password, the function is not
+                        vulnerable if an attacker needs to know the value of the existing password.</p>
+
+                    <p class="w3-xlarge w3-text-dark-grey">With these conditions in place, the attacker can
+                        construct a web page containing the following HTML:</p>
+
+
+                    <p class="w3-large w3-text-red">&nbsp;If a victim user visits the attacker's web page, the
+                        following will happen:
+
+                        The attacker's page will trigger an HTTP request to the vulnerable web site.
+                        If the user is logged in to the vulnerable web site, their browser will automatically
+                        include their session cookie in the request (assuming SameSite cookies are not being used).
+                        The vulnerable web site will process the request in the normal way, treat it as having been
+                        made by the victim user, and change their email address.
+                    </p>
+
+                    <div style="background-color:#00083D;padding:20px;">
+                        <p class="w3-large w3-text-dark-grey">&nbsp;&nbsp;&nbsp;&nbsp;
+                            <span style="color:#e08b3e">&#60;html>&nbsp;&nbsp;</span>
+                            <span style="color:#72bcd4">&#8249;&#60;body>&#8250;</span>
+                        </p>
+
+                        <p class="w3-large w3-text-dark-grey">&nbsp;&nbsp;&nbsp;&nbsp;
+                            <span style="color:#ea00ff">int</span> <span style="color:#956b6b">&#60;form
+                                action="https://vulnerable-website.com/email/change" method="POST"></span>
+                            <span style="color:#FF0000">&#60;input type="hidden" name="email"
+                                value="pwned@evil-user.net" /></span>
+                        </p>
+
+                        <p class="w3-large w3-text-dark-grey">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+                                style="color:#ea00ff">&#60;/form>&nbsp;</span></p>
+                        <p><span style="color:#956b6b"> &#60;script></span></p>
+
+                        <p class="w3-large w3-text-dark-grey">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+                                style="color:#ea00ff">document.forms[0].submit();&nbsp;</span></p>
+
+                        <p class="w3-large w3-text-dark-grey">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+                                style="color:#956b6b">&#60;/script></span></p>
+
+                        <p class="w3-large w3-text-dark-grey">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+                                style="color:#956b6b">&#60;/body></span></p>
+
+                        <p class="w3-large w3-text-dark-grey">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+                                style="color:#008900">&#60;/html></span></p>
+
+                        <p class="w3-large w3-text-green">If a victim user visits the attacker's web page, the
+                            following will happen:
+
+                            The attacker's page will trigger an HTTP request to the vulnerable web site.
+                            If the user is logged in to the vulnerable web site, their browser will automatically
+                            include their session cookie in the request (assuming SameSite cookies are not being
+                            used).
+                            The vulnerable web site will process the request in the normal way, treat it as having
+                            been made by the victim user, and change their email address.
+                        </p>
+                        <hr>
+                        <hr>
+                    </div>
+                    <br>
+                </div>>
+
+                    <!-- EXIF -->
+                    <div id="EXIF">
+                    </div>
+                    <br><br><br>
+                    <div class="w3-container w3-card w3-pale-green">
+                        <h2 class="w3-text-dark-grey w3-padding-16"><i class="fa fa-spinner"></i>&nbsp;&nbsp;EXIF
+                        </h2>
+                        <hr>
+                        <hr>
+                        <p class="w3-large w3-text-dark-grey">EXIF stands for Exchangeable Image File Format and the
+                            EXIF data contains information such as the camera model and make, shutter speed,
+                            aperture, focal length, ISO number, date, time and much more. It can also store GPS
+                            coordinates of the location where an image was shot.</p>
+
+                        <p class="w3-large w3-text-dark-grey">
+                            While being able to read such data is good to find out what settings were used to create
+                            a particular photograph, understanding photo metadata and how it can work against you is
+                            also important.</p>
+                        <p class="w3-large w3-text-dark-grey"> Even if you are not concerned about privacy, you
+                            would never want someone to get hold of sensitive personal information.</p>
+                        <p class="w3-large w3-text-dark-grey">Many social media platforms remove the metadata from
+                            the images but there are still many images online where this information is available
+                            and can be easily extracted.</p>
+                            <hr>
+                            <hr>
+                    </div>
+                    
+                
+                <br>
+
+                <!-- HTML Injection -->
+                <div id="HTML Injection">
+                </div>
+                <br><br><br>
+                <div class="w3-container w3-card w3-pale-green">
+                    <h2 class="w3-text-dark-grey w3-padding-16"><i class="fa fa-wrench"></i>&nbsp;&nbsp;HTML
+                        Injection</h2>
+                    <hr>
+                    <hr>
+                    <p class="w3-large w3-text-dark-grey">HTML injection is a type of cyber attack in which an attacker injects malicious HTML code into a website or web application. This can be done by exploiting vulnerabilities in the website or application, such as unvalidated input fields or unsecured forms.</p>
+                    <p class="w3-large w3-text-dark-grey">Once the malicious HTML code has been injected, it can be used to modify the website or application in various ways, such as redirecting users to malicious websites, stealing sensitive information, or altering the website's content or appearance. HTML injection attacks can be used to launch other types of attacks, such as phishing attacks or malware infections.</p>
+                    <p class="w3-large w3-text-dark-grey">To prevent HTML injection attacks, it is important to implement strong input validation measures and secure forms and input fields. Regular testing and patching of websites and applications can also help to identify and address any vulnerabilities that may be exploited by attackers. It is also important for users to be cautious when visiting websites and to be aware of any suspicious or unexpected changes to a website's content or appearance.</p>
+
+                    <hr>
+                    <hr>
+                </div>
+                <br>
+
+                <!-- Clickjacking  -->
+                <div id="Clickjacking">
+                </div>
+                <br><br><br>
+                <div class="w3-container w3-card w3-pale-green">
+                    <h2 class="w3-text-dark-grey w3-padding-16"><i class="fa fa-wrench"></i>&nbsp;&nbsp;Clickjacking
+                    </h2>
+                    <hr>
+                    <hr>
+                    <p class="w3-large w3-text-dark-grey">Clickjacking is an interface-based attack in which a user
+                        is tricked into clicking on actionable content on a hidden website by clicking on some other
+                        content in a decoy website.</p>
+
+                    <p class="w3-large w3-text-dark-grey"> For example, imagine an attacker who builds a web site
+                        that has a button on it that says, “click here for a free iPod”. However, on top of that web
+                        page, the attacker has loaded an iframe with your mail account and lined up exactly the
+                        “delete all messages” button directly on top of the “free iPod” button. The victim tries to
+                        click on the “free iPod” button but instead actually clicked on the invisible “delete all
+                        messages” button. In essence, the attacker has “hijacked” the user’s click, hence the name
+                        “Clickjacking”.</p>
+
+                    <hr>
+                    <hr>
+                </div>
+                <br>
+
+
+
+                <!-- SSRF -->
+                <div id="SSRF">
+                </div>
+                <br><br><br>
+                <div class="w3-container w3-card w3-pale-green">
+                    <h2 class="w3-text-dark-grey w3-padding-16"><i class="fa fa-th"></i>&nbsp;&nbsp;SSRF</h2>
+                    <hr>
+                    <hr>
+                    <p class="w3-large w3-text-dark-grey">A Server-Side Request Forgery (SSRF) attack involves an
+                        attacker abusing server functionality to access or modify resources. The attacker targets an
+                        application that supports data imports from URLs or allows them to read data from URLs. URLs
+                        can be manipulated, either by replacing them with new ones or by tampering with URL path
+                        traversal.</p>
+
+                    <p class="w3-large w3-text-dark-grey"> One of the most prevalent examples of an SSRF attack is
+                        gaining access to Amazon EC2 instance credentials. If an IAM role is attributed to an EC2
+                        instance, the provisional credentials may be accessed by completing a request to:
+                    </p>
+
+                    <p class="w3-large w3-text-dark-grey">
+                        http://169.254.169.254/latest/meta-data/iam/security-credentials/{role-name}
+                        The level of damage that can be caused by the attacker depends on the level of access given
+                        to the IAM role. The higher the privileges of the role, the bigger the breach.</p>
+
+                    <hr>
+                    <hr>
+                </div>
+                <br>
+
+
+                <!-- LFI -->
+                <div id="LFI">
+                </div>
+                <br><br><br>
+                <div class="w3-container w3-card w3-pale-green">
+                    <h2 class="w3-text-dark-grey w3-padding-16"><i class="fa fa-th"></i>&nbsp;&nbsp;LFI</h2>
+                    <hr>
+                    <hr>
+                    <p class="w3-large w3-text-dark-grey">A File Inclusion Vulnerability is a type of Vulnerability
+                        commonly found in PHP based websites and it is used to affect the web applications. This
+                        issue generally occurs when an application is trying to get some information from a
+                        particular server where the inputs for getting a particular file location are not treated as
+                        a trusted source.
+                    </p>
+                    <p class="w3-large w3-text-dark-grey"> It generally refers to an inclusion attack where an
+                        attacker can supply a valid input to get a response from a web server. In response, an
+                        attacker will be able to judge whether the input which he supplied is valid or not. If it is
+                        valid, then whatever/whichever file an attacker wants to see they can easily access it.</p>
+
+                    <p class="w3-large w3-text-dark-grey">•
+                        Below example illustrates the working procedure of an LFI vulnerability:</p>
+
+                    <div style="background-color:#00083D;padding:20px;">
+                        <p class="w3-large w3-text-dark-grey">&nbsp;&nbsp;&nbsp;&nbsp;
+                            <span style="color:#e08b3e">&#60;?php&nbsp;&nbsp;</span>
+                            <span style="color:#72bcd4">&#8249;// The Page we wish to display&#8250;</span>
+                        </p>
+
+                        <p class="w3-large w3-text-dark-grey">&nbsp;&nbsp;&nbsp;&nbsp;
+                            <span style="color:#ea00ff">int</span> <span style="color:#956b6b">$file =
+                                $_GET['page']; </span>
+                            <span style="color:#FF0000">?></span>
+                        </p>
+
+                        <hr>
+                        <hr>
+                    </div>
+                    <p>Local File Inclusion Work: Let us understand the working of Local File Inclusion via the
+                        following example:
+                        In the above example "$file = $_GET['page'];" $file is just a file/code for indicating that
+                        the PHP code is going to return a ‘file’ in response.
+                        The $_GET is one of the sets of instruction which will get a particular file or webpage from
+                        a web server i.e. it will request for a file. The ['page'] is an argument that will define
+                        what type of pages will be displayed in response.
+                    </p>
+                    <br>
+                    <hr>
+                        <hr>
+                </div>
+
+                    <!-- Subdomain Takeover  -->
+                    <div id="Subdomain Takeover">
+                    </div>
+                    <br><br><br>
+                    <div class="w3-container w3-card w3-pale-green">
+                        <h2 class="w3-text-dark-grey w3-padding-16"><i class="fa fa-th"></i>&nbsp;&nbsp; Subdomain
+                            Takeover </h2>
+                        <hr>
+                        <hr>
+                        <p class="w3-large w3-text-dark-grey">Subdomain takeover is a high severity vulnerability
+                            that can be exploited to take control of a domain and pointing it to an address managed
+                            by attackers. Attacks on this vulnerability are often used for the purpose of creating
+                            phishing sites, spreading malwares.
+                        </p>
+                        <p class="w3-large w3-text-dark-grey"> The goal of this attack is to point a victim’s domain
+                            to an attacker’s address. This is closely related to the domain resolutions I have
+                            described above. In the case of using A/AAAA records for the resolution, it’s not worth
+                            mentioning but the remaining cases have weaknesses.</p>
+
+                        <p class="w3-large w3-text-dark-grey">Let’s look at a scenario as follows:</p>
+                        <p class="w3-large w3-text-dark-grey">• You own x.example.com</p>
+                        <p class="w3-large w3-text-dark-grey">x.example.com points to another.domain.com by using a
+                            CNAME record</p>
+                        <p class="w3-large w3-text-dark-grey"> In order to control the content of
+                            http://x.example.com, we have to control the content of http://another.domain.com. This
+                            is possibile, if:
+                            another.domain.com is an expired domain -> Buy this domain</p>
+                        <p class="w3-large w3-text-dark-grey"> domain.com belongs to an Internet service and it
+                            allows to create a sub-domain like another.domain.com if that name is available. You can
+                            find out many serives having that feature such as Github, Heroku, Amazon S3, Shopify,
+                            etc.</p>
+
+                        <hr>
+                        <hr>
+                    </div>
+                    <br>
+
+                
+            </div>
+        </div>
+</body>
+
+</html>

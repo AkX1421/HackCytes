@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang = "en">
+
+<head>
+<title>Cryptography</title>
+
+<script type="text/javascript"
+    id="botcopy-embedder-d7lcfheammjct"
+    class="botcopy-embedder-d7lcfheammjct" 
+    data-botId="63a9aec7593b0b0008f2650d" >
+    var s = document.createElement('script'); 
+    s.type = 'text/javascript'; s.async = true; 
+    s.src = 'https://widget.botcopy.com/js/injection.js'; 
+    document.getElementById('botcopy-embedder-d7lcfheammjct').appendChild(s);
+</script>
+
+
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel = "icon" href = "https://img.icons8.com/dusk/64/000000/c-drive-2.png">
+<style>
+html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
+#navfix {
+	position: fixed;
+	overflow: auto;
+}
+.color {
+    background-color:  #206604;
+    color: #FFFFFF;
+}
+.hovering:hover {
+    background-color: #e7ece7;
+    color: #000000;
+}
+.dec {
+    text-decoration: none;
+}
+.pad {
+    padding: 10px;
+    margin-top: 100px;
+}
+div {
+			text-align: justify;
+		}
+</style>
+</head>
+<body class = "w3-black">
+    
+<script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+<df-messenger
+  intent="WELCOME"
+  chat-title="HackCytes"
+  agent-id="2b7a11fc-14bd-42de-8fdf-bcc6a2a2c70e"
+  language-code="en"
+></df-messenger>
+<meta name="viewport" content="width-device-width, initial-scale=1">
+<div class="w3-top ">
+<div class="w3-bar color w3-card">
+
+<!-- Top fixed navigagtion bar -->
+<!--<a href="login.php" class=" w3-bar-item dec  w3-padding-large hovering w3-right">&nbsp;<i class="fa fa-sign-out"></i>&nbsp;&nbsp;Log Out</a> -->
+<a href="forum/index.php" class=" w3-bar-item dec w3-padding-large hovering w3-right">&nbsp;<i class="fa fa-users"></i>&nbsp;&nbsp;Discussion Forum</a>
+<a href="Labs/login.php" class=" w3-bar-item dec w3-padding-large hovering w3-right"><i class="fa fa-code"></i>&nbsp;&nbsp;Labs</a>
+<a href="first.html" class=" w3-bar-item dec w3-padding-large hovering w3-right"><i class="fa fa-home"></i>&nbsp;&nbsp;HOME</a> 
+</div>
+</div>
+</div>
+
+
+<!-- Left side Navigation for the page -->
+<nav class="w3-sidebar w3-black w3-text-white w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:500px;font-weight:bold;overflow:auto" id="mySidebar"><br>  
+<div class="w3-bar-block">
+<h2 class = "w3-xxxlarge w3-text-green w3-center">Learn Cryptography</h2>
+<br><br>
+<a href = "#Cryptography" class="w3-button w3-white w3-round-xxlarge w3-hover-green w3-hover-text-white" style = "width: 100%">Cryptography</a>
+<br><br>
+<a href = "#Ceaser Cipher" class="w3-button w3-white w3-round-xxlarge w3-hover-green w3-hover-text-white" style = "width: 100%">Ceaser Cipher</a>
+<br><br>
+<a href = "#Monoalphabetic Subs" class="w3-button w3-white w3-round-xxlarge w3-hover-green w3-hover-text-white" style = "width: 100%">Monoalphabetic Subs</a>
+<br><br>
+<a href = "#Hill cipher" class="w3-button w3-white w3-round-xxlarge w3-hover-green w3-hover-text-white" style = "width: 100%">Hill cipher</a>
+<br><br>
+<a href = "#Playfair Cipher" class="w3-button w3-white w3-round-xxlarge w3-hover-green w3-hover-text-white" style = "width: 100%">Playfair Cipher</a>
+<br><br>
+<a href = "#Vigenere Cipher" class="w3-button w3-white w3-round-xxlarge w3-hover-green w3-hover-text-white" style = "width: 100%">Vigenere Cipher</a>
+<br><br>
+<a href = "#Transposition Cipher" class="w3-button w3-white w3-round-xxlarge w3-hover-green w3-hover-text-white" style = "width: 100%">Transposition Cipher</a>
+<br><br>
+<a href = "#Rail Fence Cipher" class="w3-button w3-white w3-round-xxlarge w3-hover-green w3-hover-text-white" style = "width: 100%">Rail Fence Cipher</a>
+<br><br>
+<a href = "#Stream Cipher" class="w3-button w3-white w3-round-xxlarge w3-hover-green w3-hover-text-white" style = "width: 100%">Stream Cipher</a>
+<br><br>
+<a href = "#Block Cipher" class="w3-button w3-white w3-round-xxlarge w3-hover-green w3-hover-text-white" style = "width: 100%">Block  Cipher</a>
+<br><br>
+<a href = "#RSA" class="w3-button w3-white w3-round-xxlarge w3-hover-green w3-hover-text-white" style = "width: 100%">RSA</a>
+<br><br>
+<a href = "#DSA" class= "w3-button  w3-white w3-round-xxlarge w3-hover-green w3-hover-text-white" style = "width: 100%">DSA</a>
+<br><br>
+<a href = "#Steganography" class= "w3-button  w3-white w3-round-xxlarge w3-hover-green w3-hover-text-white" style = "width: 100%">Steganography</a>
+<br><br><br><br>
+  </div>
+</nav>
+
+<div class="w3-content w3-margin-top" style="max-width:1400px;">
+<div class="w3-row-padding">
+<div class="w3-third">
+<div class="w3-white w3-text-white w3-card-4">
+<div class="w3-container">
+</div>
+</div>
+<br><br>
+</div>
+<!-- Right Column -->
+<div class = "w3-twothird">
+
+<!-- Cryptography -->
+<div id = "Cryptography">
+</div>
+<br><br><br>
+<div class = "w3-container w3-card w3-pale-green w3-margin-bottom">
+<h2  class = "w3-text-dark-grey w3-padding-16"><i class="fa fa-info-circle"></i>&nbsp;&nbsp;Cryptography</h2>
+<div class = "w3-container">
+<hr>
+<hr>
+
+<p class = "w3-large w3-text-dark-grey">Cryptography is the process of hiding or coding information so that only the person a message was intended for can read it. The art of cryptography has been used to code messages for thousands of years and continues to be used in bank cards, computer passwords, and ecommerce.</p>
+<p class = "w3-large w3-text-dark-grey"> Modern cryptography techniques include algorithms and ciphers that enable the encryption and decryption of information, such as 128-bit and 256-bit encryption keys. Modern ciphers, such as the Advanced Encryption Standard (AES), are considered virtually unbreakable. </p>
+<p class = "w3-large w3-text-dark-grey"> A common cryptography definition is the practice of coding information to ensure only the person that a message was written for can read and process the information. This cybersecurity practice, also known as cryptology, combines various disciplines like computer science, engineering, and mathematics to create complex codes that hide the true meaning of a message. Cryptography uses algorithms and mathematical concepts to transform messages into difficult-to-decipher codes through techniques like cryptographic keys and digital signing to protect data privacy, credit card transactions, email, and web browsing.</p>
+
+<h3  class = "w3-text-dark-grey w3-padding-16"><i class="fa fa-info-circle"></i>&nbsp;&nbsp;Types of Cryptographic Algorithms</h3>
+<p class = "w3-large w3-text-dark-grey">There are many types of cryptographic algorithms available. They vary in complexity and security, depending on the type of communication and the sensitivity of the information being shared. </p>
+
+1️⃣ <b>Secret Key Cryptography :</b><br> Secret key cryptography, also known as symmetric encryption, uses a single key to encrypt and decrypt a message. The sender encrypts the plaintext message using the key and sends it to the recipient who then uses the same key to decrypt it and unlock the original plaintext message.
+<br>
+<br>
+2️⃣ <b>Ciphers: </b><br> Stream ciphers work on a single bit or byte at any time and constantly change the key using feedback mechanisms. A self-synchronizing stream cipher ensures the decryption process stays in sync with the encryption process by recognizing where it sits in the bit keystream. A synchronous stream cipher generates the keystream independently of the message stream and generates the same keystream function at both the sender and the receiver.
+<br>
+<br>
+3️⃣ <b>Block Ciphers : </b><br>Block ciphers encrypt one block of fixed-size data at a time. It will always encrypt a plaintext data block to the same ciphertext when the same key is used. A good example of this is the Feistel cipher, which uses elements of key expansion, permutation, and substitution to create vast confusion and diffusion in the cipher. 
+    The stages of encryption and decryption are similar if not identical, which means reversing the key reduces the code size and circuitry required for implementing the cipher in a piece of software or hardware.
+<br><br>
+    4️⃣ <b>Public Key Cryptography :</b><br> Public key cryptography (PKC), or asymmetric cryptography, uses mathematical functions to create codes that are exceptionally difficult to crack. It enables people to communicate securely over a nonsecure communications channel without the need for a secret key. For example, proxy reencryption enables a proxy entity to reencrypt data from one public key to another without requiring access to the plaintext or private keys.
+
+
+<hr>
+<hr>
+</div>
+</div>
+
+
+<!-- Ceaser cipher -->
+<div id = "Ceaser Cipher">
+</div>
+<br><br><br>
+<div class = "w3-container w3-card w3-pale-green">
+<h2  class = "w3-text-dark-grey w3-padding-16"><i class="fa fa-play"></i>&nbsp;&nbsp;Ceaser Cipher</h2>
+<hr><hr>
+
+<p class = "w3-large"> The Caesar cipher is a simple type of substitution cipher that involves replacing each letter in a message with another letter that is a fixed number of positions down the alphabet. For example, if the key is 3, then the letter "A" would be replaced with the letter "D", "B" would be replaced with "E", and so on. The Caesar cipher can be easily broken by someone who knows the key, as there are only 25 possible keys (since there are 26 letters in the English alphabet and the key cannot be 0).</p>
+<p class = "w3-large"> The Caesar cipher is not considered to be a secure method of encryption, as it can be easily broken by even basic cryptanalysis techniques. However, it is still used in some contexts as a way to introduce the concept of encryption to beginners, or as a simple way to obscure short messages. More secure encryption methods, such as the Advanced Encryption Standard (AES), should be used for sensitive information.</p>
+
+<p class = "w3-large"> The following text has been encrypted using a 23 shift.</p>
+
+<div style="background-color:#00083D;padding:20px;">
+    <p class = "w3-large w3-text-dark-grey">&nbsp;&nbsp;&nbsp;&nbsp;
+        <span  style="color:#72bcd4">&#8249;THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG &#8250;</span></p>
+    <p class = "w3-large w3-text-dark-grey">&nbsp;&nbsp;&nbsp;&nbsp;
+        <span  style="color:#72bcd4">&#8249;QEB NRFZH YOLTK CLU GRJMP LSBO QEB IXWV ALD &#8250;</span></p>
+</div>
+<hr><hr>
+</div>
+
+
+<br>
+
+
+
+<!-- Monoalphabetic Subs -->
+<div id = "Monoalphabetic Subs"></div>
+
+<br><br><br>
+<div class = "w3-container w3-card w3-pale-green">
+<h2  class = "w3-text-dark-grey w3-padding-16"><i class="fa fa-check-circle"></i>&nbsp;&nbsp;Monoalphabetic Substitution</h2>
+<hr><hr>
+<p class = "w3-large ">A monoalphabetic substitution cipher, also known as a simple substitution cipher, relies on a fixed replacement structure. That is, the substitution is fixed for each letter of the alphabet. Thus, if "a" is encrypted to "R", then every time we see the letter "a" in the plaintext, we replace it with the letter "R" in the ciphertext.</p>
+<p class = "w3-large "> A simple example is where each letter is encrypted as the next letter in the alphabet: "a simple message" becomes "B TJNQMF NFTTBHF". In general, when performing a simple substitution manually, it is easiest to generate the ciphertext alphabet first, and encrypt by comparing this to the plaintext alphabet. The table below shows how one might choose to, and we will, lay them out for this example. </p>
+<br>
+
+<p class = "w3-large w3-text-dark-grey">For example, let us take a simple mathematical expression c = a + b. Here, the values of a, b, c are not known. To compute the value of c, different persons can give different values of a and b. As their values are not fixed, they are called variables.</p>
+<img style="background-color: hsl(0, 0%, 90%);transition: background-color 300ms;" src="4433929_orig.jpg" width="832" height="100">
+
+<hr><hr>
+</div>
+<br>
+
+
+
+<!-- Hill cipher -->
+<div id = "Hill cipher">
+</div>
+<br><br><br>
+<div class = "w3-container w3-card w3-pale-green">
+<h2  class = "w3-text-dark-grey w3-padding-16"><i class="fa fa-stop"></i>&nbsp;&nbsp;Hill Cipher</h2>
+<hr><hr>
+
+<p class = "w3-large w3-text-dark-grey">Hill cipher is a polygraphic substitution cipher based on linear algebra.Each letter is represented by a number modulo 26. Often the simple scheme A = 0, B = 1, …, Z = 25 is used, but this is not an essential feature of the cipher. To encrypt a message, each block of n letters (considered as an n-component vector) is multiplied by an invertible n × n matrix, against modulus 26. To decrypt the message, each block is multiplied by the inverse of the matrix used for encryption.
+The matrix used for encryption is the cipher key, and it should be chosen randomly from the set of invertible n × n matrices (modulo 26).</p>
+
+<p class = "w3-large w3-text-dark-grey"> 1️⃣ Encryption</p>
+<p>We have to encrypt the message ‘ACT’ (n=3).The key is ‘GYBNQKURP’ which can be written as the nxn matrix:</p>
+<img style="background-color: hsl(0, 0%, 90%);transition: background-color 300ms;" src="img1.jpg" width="232" height="150">
+
+<p class = "w3-large w3-text-dark-grey">The message ‘ACT’ is written as vector:</p>
+<img style="background-color: hsl(0, 0%, 90%);transition: background-color 300ms;" src="img2.jpg" width="132" height="90">
+ 
+<p class = "w3-large w3-text-dark-grey">The enciphered vector is given as:</p>
+<img style="background-color: hsl(0, 0%, 90%);transition: background-color 300ms;" src="img3.jpg" width="532" height="100">
+
+<p class = "w3-large w3-text-dark-grey">which corresponds to ciphertext of ‘POH’</p>
+<br>
+
+
+<p class = "w3-xlarge w3-text-dark-grey">2️⃣ Decryption</p>
+<p class = "w3-large w3-text-dark-grey"> To decrypt the message, we turn the ciphertext back into a vector, then simply multiply by the inverse matrix of the key matrix (IFKVIVVMI in letters).The inverse of the matrix used in the previous example is:</p>
+<img style="background-color: hsl(0, 0%, 90%);transition: background-color 300ms;" src="img4.jpg" width="532" height="100">
+<p class = "w3-large w3-text-dark-grey">For the previous Ciphertext ‘POH’:</p>
+<img style="background-color: hsl(0, 0%, 90%);transition: background-color 300ms;" src="img5.jpg" width="532" height="100">
+<p class = "w3-large w3-text-dark-grey">which gives us back ‘ACT’. Assume that all the alphabets are in upper case. Below is the the implementation of the above idea for n=3.</p>
+
+<hr><hr>
+</div>
+<br>
+
+
+
+<!-- Playfair Cipher -->
+<div id = "Playfair Cipher">
+</div>
+<br><br><br>
+<div class = "w3-container w3-card w3-pale-green">
+<h2  class = "w3-text-dark-grey w3-padding-16"><i class="fa fa-key"></i>&nbsp;&nbsp;Playfair Cipher</h2>
+<hr><hr>
+<p class = "w3-large w3-text-dark-grey">Playfair cipher is an encryption algorithm to encrypt or encode a message. It is the same as a traditional cipher. The only difference is that it encrypts a digraph (a pair of two letters) instead of a single letter.
+</p>
+
+<p class = "w3-large w3-text-dark-grey"> It initially creates a key-table of 5*5 matrix. The matrix contains alphabets that act as the key for encryption of the plaintext. Note that any alphabet should not be repeated. Another point to note that there are 26 alphabets and we have only 25 blocks to put a letter inside it. Therefore, one letter is excess so, a letter will be omitted (usually J) from the matrix. Nevertheless, the plaintext contains J, then J is replaced by I. It means treat I and J as the same letter, accordingly.</p>
+
+<p class = "w3-large w3-text-dark-grey">Since Playfair cipher encrypts the message digraph by digraph. Therefore, the Playfair cipher is an example of a digraph substitution cipher.</p>
+
+<ol>
+<li class = "w3-large w3-text-dark-grey">First, split the plaintext into digraphs (pair of two letters). If the plaintext has the odd number of letters, append the letter Z at the end of the plaintext. It makes the plaintext of even For example, the plaintext MANGO has five letters. So, it is not possible to make a digraph. Since, we will append a letter Z at the end of the plaintext, i.e. MANGOZ.</li>   
+<li class = "w3-large w3-text-dark-grey">After that, break the plaintext into digraphs (pair of two letters). If any letter appears twice (side by side), put X at the place of the second occurrence. Suppose, the plaintext is COMMUNICATE then its digraph becomes CO MX MU NI CA TE. Similarly, the digraph for the plaintext JAZZ will be JA ZX ZX, and for plaintext GREET, the digraph will be GR EX ET.</li>   
+<li class = "w3-large w3-text-dark-grey">To determine the cipher (encryption) text, first, build a 5*5 key-matrix or key-table and filled it with the letters of alphabets, as directed below:</li>  
+</ol>
+<p class = "w3-xlarge w3-text-dark-grey">1️⃣ Encryption</p>
+<p class = "w3-large w3-text-dark-grey">➡Encryption We have to generate a 5 × 5 matrix from the key as</p>
+<img style="background-color: hsl(0, 0%, 90%);transition: background-color 300ms;" src="img6.png" width="232" height="130">   
+<p class = "w3-large w3-text-dark-grey">➡Split the plaintext in digraphs(pair of two). If there is an odd number of letters, a Z is added to the last letter. Pair cannot be made with same letter. Break the letter in single and add a bogus letter to the previous letter.</p>   
+<img style="background-color: hsl(0, 0%, 90%);transition: background-color 300ms;" src="img7.png" width="432" height="80">
+<p class = "w3-large w3-text-dark-grey">➡Now, we need to follow the rules for encrypting and do as follows:</p> 
+<img style="background-color: hsl(0, 0%, 90%);transition: background-color 300ms;" src="img8.png" width="432" height="300">  
+<p class = "w3-large w3-text-dark-grey">➡So we will get the encrypted text as gatlmzclrqtx.</p>   
+
+
+<p class = "w3-xlarge w3-text-dark-grey">2️⃣ Decryption</p>
+<p class = "w3-large w3-text-dark-grey">➡We have to generate a 5 × 5 matrix from the key as</p>
+<img style="background-color: hsl(0, 0%, 90%);transition: background-color 300ms;" src="img9.png" width="232" height="130">   
+<p class = "w3-large w3-text-dark-grey">➡We need to split the ciphertext as done for plaintext while encrypting</p>   
+<img style="background-color: hsl(0, 0%, 90%);transition: background-color 300ms;" src="img10.png" width="432" height="80">
+<p class = "w3-large w3-text-dark-grey">➡For the previous Cipher Text gatlmzclrqtx, by following the rules we get:</p> 
+<img style="background-color: hsl(0, 0%, 90%);transition: background-color 300ms;" src="img11.png" width="432" height="300">  
+<p class = "w3-large w3-text-dark-grey">➡So we will get the encrypted text as instrumentsz.</p>   
+
+<hr><hr>
+</div>
+<br>
+
+
+<!-- Vigenere Cipher -->
+<div id = "Vigenere Cipher">
+</div>
+<br><br><br>
+<div class = "w3-container w3-card w3-pale-green">
+<h2  class = "w3-text-dark-grey w3-padding-16"><i class="fa fa-table"></i>&nbsp;&nbsp;Vigenere Cipher </h2>
+<hr><hr>
+<p class = "w3-large w3-text-dark-grey">The vigenere cipher is an algorithm that is used to encrypting and decrypting the text. The vigenere cipher is an algorithm of encrypting an alphabetic text that uses a series of interwoven caesar ciphers. It is based on a keyword's letters. It is an example of a polyalphabetic substitution cipher.</p>
+<br>
+
+<p class = "w3-large w3-text-dark-grey">➡ When the vigenere table is given, the encryption and decryption are done using the vigenere table (26 * 26 matrix) in this method.</p>
+<br>
+
+<div style="background-color:#00083D;padding:20px;">
+    <p class = "w3-large w3-text-dark-grey">
+        <span  style="color:#72bcd4">Example </span></p>
+    <p class = "w3-large w3-text-dark-grey">
+        <span  style="color:#72bcd4"> Suppose we wish to encrypt the plaintext message : THE SUN AND THE MAN IN THE MOON ,
+            using the keyword KING. </span></p>
+    <p class = "w3-large w3-text-dark-grey">
+        <span  style="color:#72bcd4"> Begin by writing the keyword, repeated as many times as necessary, above the plaintext message. To derive the ciphertext using the table above, for each letter in the plaintext, find the intersection of the row given by the corresponding keyword letter and the column given by the plaintext letter itself to pick out the ciphertext letter. </span></p>
+    <p class = "w3-large w3-text-dark-grey">&nbsp;&nbsp;&nbsp;&nbsp;
+        <span  style="color:#72bcd4"> Keyword:    KIN GKI NGK ING KIN GK ING KING </span></p>
+    <p class = "w3-large w3-text-dark-grey">&nbsp;&nbsp;&nbsp;&nbsp;
+        <span  style="color:#72bcd4"> Plaintext:  THE SUN AND THE MAN IN THE MOON </span></p>
+    <p class = "w3-large w3-text-dark-grey">&nbsp;&nbsp;&nbsp;&nbsp;
+        <span  style="color:#72bcd4"> Ciphertext: DPR YEV NTN BUK WIA OX BUK WWBT </span></p>
+</div>
+<hr><p  class = "w3-large w3-text-dark-grey">                </p>
+
+<div style="background-color:#00083D;padding:20px;">
+    <p class = "w3-large w3-text-dark-grey">
+        <span  style="color:#72bcd4"> To decrypt the text, find the cipher alphabet in the row of the keyword letter, then see the column of the cipher alphabet. </span></p>
+    <p class = "w3-large w3-text-dark-grey">
+        <span  style="color:#72bcd4"> To decrypt the text:</span></p>
+    <p class = "w3-large w3-text-dark-grey">
+        <span  style="color:#72bcd4"> Begin by writing the keyword, repeated as many times as necessary, above the plaintext message. To derive the ciphertext using the table above, for each letter in the plaintext, find the intersection of the row given by the corresponding keyword letter and the column given by the plaintext letter itself to pick out the ciphertext letter. </span></p>
+    <p class = "w3-large w3-text-dark-grey">&nbsp;&nbsp;&nbsp;&nbsp;
+        <span  style="color:#72bcd4"> Keyword:    KIN GKI NGK ING KIN GK ING KING</span></p>
+    <p class = "w3-large w3-text-dark-grey">&nbsp;&nbsp;&nbsp;&nbsp;
+        <span  style="color:#72bcd4"> Ciphertext: DPR YEV NTN BUK WIA OX BUK WWBT</span></p>
+    <p class = "w3-large w3-text-dark-grey">&nbsp;&nbsp;&nbsp;&nbsp;
+        <span  style="color:#72bcd4"> Plaintext:  THE SUN AND THE MAN IN THE MOON </span></p>
+</div>
+<hr><hr>
+</div>
+<br>
+
+
+<!-- Transposition Cipher -->
+<div id = "Transposition Cipher">
+</div>
+<br><br><br>
+<div class = "w3-container w3-card w3-pale-green">
+<h2  class = "w3-text-dark-grey w3-padding-16"><i class="fa fa-cogs"></i>&nbsp;&nbsp;Transposition Cipher</h2>
+<hr><hr>
+<p class = "w3-large w3-text-dark-grey">Transposition Cipher is a cryptographic algorithm where the order of alphabets in the plaintext is rearranged to form a cipher text. In this process, the actual plain text alphabets are not included.</p>
+
+<p class = "w3-xlarge w3-text-dark-grey">Example</p> 
+<p class = "w3-large w3-text-dark-grey">A simple example for a transposition cipher is columnar transposition cipher where each character in the plain text is written horizontally with specified alphabet width. The cipher is written vertically, which creates an entirely different cipher text.</p>
+
+<p class = "w3-large w3-text-dark-grey">For example, let’s say the plaintext is “attack at dawn” and the key is 4. The plaintext, in that case, is written in a table like the following:</p>
+<img style="background-color: hsl(0, 0%, 90%);transition: background-color 300ms;" src="img14.png" width="332" height="200">  
+
+<p class = "w3-large w3-text-dark-grey">Please note that the table is a 4×4 table and the length of the plaintext is 14. So, the last two places in the table can be filled with spaces or nulls.</p>
+
+<p class = "w3-large w3-text-dark-grey">The table is then read column-wise to get the ciphertext. The ciphertext, in this case, is:</p>
+<img style="background-color: hsl(0, 0%, 90%);transition: background-color 300ms;" src="img15.png" width="332" height="100">  
+
+<p class = "w3-large w3-text-dark-grey">In the above example, we used an integer as the key. But, the key can be a word also. For example, we can use the key “road”. The length of the key is 4. So, each row of the table will contain 4 letters. But, after writing the table, the columns are read as per the letters in the key. In our example, if the letters of the word ‘road’ is written alphabetically, then ‘a’ comes first, ‘d’ comes next, then ‘o’ and ‘r’ come. In other words, ‘a’ can be represented with ‘1’, ‘d’ with ‘2’, ‘o’ with ‘3’ and ‘r’ with ‘4’. So, the key ‘road’ now becomes 4312.</p>
+
+<p class = "w3-large w3-text-dark-grey">    Thus, while generating the ciphertext, the fourth column is read first, then the third, first and second columns are read respectively. So, the ciphertext now becomes</p>
+
+<img style="background-color: hsl(0, 0%, 90%);transition: background-color 300ms;" src="img16.png" width="332" height="200">  
+
+<p class = "w3-large w3-text-dark-grey">A double transposition cipher is more complex. In that case, we firstly generate a ciphertext using the above method and then, the ciphertext is again encrypted with the same key or with a different key.</p>
+
+<p class = "w3-large w3-text-dark-grey"> For example, in the above example, the ciphertext is ‘aaa t d actwtk n’ We can again encrypt this text </p> 
+
+<hr><hr>
+</div>
+<br>
+
+
+<!-- Rail Fence Cipher -->
+<div id = "Rail Fence Cipher">
+</div>
+<br><br><br>
+<div class = "w3-container w3-card w3-pale-green">
+<h2  class = "w3-text-dark-grey w3-padding-16"><i class="fa fa-code"></i>&nbsp;&nbsp;Rail Fence Cipher</h2>
+<hr><hr>
+<p class = "w3-large w3-text-dark-grey">The railfence cipher is an easy to apply transposition cipher that jumbles up the order of the letters of a message in a quick convenient way. It also has the security of a key to make it a little bit harder to break.
+   
+    
+<p class = "w3-large w3-text-dark-grey"> The Rail Fence cipher works by writing your message on alternate lines across the page, and then reading off each line in turn. For example, the plaintext "defend the east wall" is written as shown below, with all spaces removed.</p>
+    Picture</p>  
+<p class = "w3-large w3-text-dark-grey">The simplest Rail Fence Cipher, where each letter is written in a zigzag pattern across the page.
+    The ciphertext is then read off by writing the top row first, followed by the bottom row, to get "DFNTEATALEEDHESWL".</p>
+
+
+<p class = "w3-xlarge w3-text-dark-grey">Encryption</p> 
+<p class = "w3-large w3-text-dark-grey">To encrypt a message using the Rail Fence Cipher, you have to write your message in zigzag lines across the page, and then read off each row. Firstly, you need to have a key, which for this cipher is the number of rows you are going to have. You then start writing the letters of the plaintext diagonally down to the right until you reach the number of rows specified by the key. You then bounce back up diagonally until you hit the first row again. This continues until the end of the plaintext.</p>
+
+<img style="background-color: hsl(0, 0%, 90%);transition: background-color 300ms;" src="img17.jpg" width="832" height="200">  
+
+<p class = "w3-large w3-text-dark-grey">Note that at the end of the message we have inserted two "X"s. These are called nulls, and act as placeholders. We do this to make the message fit neatly in to the grid (so that there are the same number of letters on the top row, as on the bottom row. Although not necessary, it makes the decryption process a lot easier if the message has this layout.</p>
+
+<p class = "w3-large w3-text-dark-grey"> The ciphertext is read off row by row to get "DNETLEEDHESWLXFTAAX".</p>
+
+<p class = "w3-xlarge w3-text-dark-grey">Decryption</p>
+
+<p class = "w3-large w3-text-dark-grey"> The decryption process for the Rail Fence Cipher involves reconstructing the diagonal grid used to encrypt the message. We start writing the message, but leaving a dash in place of the spaces yet to be occupied. Gradually, you can replace all the dashes with the corresponding letters, and read off the plaintext from the table.</p>
+
+<p class = "w3-large w3-text-dark-grey">  We start by making a grid with as many rows as the key is, and as many columns as the length of the ciphertext. We then place the first letter in the top left square, and dashes diagonally downwards where the letters will be. When we get back to the top row, we place the next letter in the ciphertext. Continue like this across the row, and start the next row when you reach the end.</p>
+
+<p class = "w3-large w3-text-dark-grey"><i class="fa fa-check"></i>&nbsp; For example, if you receive the ciphertext "TEKOOHRACIRMNREATANFTETYTGHH", encrypted with a key of 4, you start by placing the "T" in the first square. You then dash the diagonal down spaces until you get back to the top row, and place the "E" here. Continuing to fill the top row you get the pattern below.</p>
+
+<img style="background-color: hsl(0, 0%, 90%);transition: background-color 300ms;" src="img18.jpg" width="832" height="200">  
+
+<hr><hr>
+</div>
+<br>
+
+
+<!-- Stream Cipher -->
+<div id = "Stream Cipher">
+</div>
+<br><br><br>
+<div class = "w3-container w3-card w3-pale-green">
+<h2  class = "w3-text-dark-grey w3-padding-16"><i class="fa fa-comment-o"></i>&nbsp;&nbsp;Stream Cipher </h2>
+<hr><hr>
+<p class = "w3-large w3-text-dark-grey">A stream cipher is a method of encrypting text (to produce ciphertext) in which a cryptographic key and algorithm are applied to each binary digit in a data stream, one bit at a time. The main alternative method to stream cipher is, in fact, the block cipher, where a key and algorithm are applied to blocks of data rather than individual bits in a stream.</p>
+<p class = "w3-xlarge w3-text-dark-grey">Steps</p>
+<ul>
+<li class = "w3-large w3-text-dark-grey">For encryption, plain text and keystream are required.</li>
+<li class = "w3-large w3-text-dark-grey">The plain text and keystream produce ciphertext using XOR Operation.</li>
+<li class = "w3-large w3-text-dark-grey">Plain text is XOR’ed with keystream bit by bit to produce CipherText. </li>
+</ul> 
+
+
+<p class = "w3-large w3-text-dark-grey">Example</p>
+
+<p class = "w3-large w3-text-dark-grey">Plain Text: 10011001</p>
+<p class = "w3-large w3-text-dark-grey">Keystream: 11000011</p>
+<p class = "w3-large w3-text-dark-grey">—————————————————————</p>
+<p class = "w3-large w3-text-dark-grey">Ciphertext: 01011010</p>
+
+<p class = "w3-xlarge w3-text-dark-grey">Decryption</p>
+
+<p class = "w3-xlarge w3-text-dark-grey">Steps</p>
+<ul>
+<li class = "w3-large w3-text-dark-grey">For decryption, ciphertext and the same keystream are required which was used for encryption.</li>
+<li class = "w3-large w3-text-dark-grey">The ciphertext and the keystream produce plain text using XOR Operation.</li>
+<li class = "w3-large w3-text-dark-grey">The ciphertext is XOR’ed with keystream bit by bit to produce PlainText.</li>
+</ul> 
+
+
+<p class = "w3-large w3-text-dark-grey">Example</p>
+
+<p class = "w3-large w3-text-dark-grey">Ciphertext: 01011010</p>
+<p class = "w3-large w3-text-dark-grey">Keystream: 11000011</p>
+<p class = "w3-large w3-text-dark-grey">—————————————————————</p>
+<p class = "w3-large w3-text-dark-grey">Plain Text: 10011001</p>
+
+
+<hr><hr>
+</div>
+<br>
+
+
+<!-- Block  Cipher -->
+<div id = "Block Cipher">
+</div>
+<br><br><br>
+<div class = "w3-container w3-card w3-pale-green">
+<h2  class = "w3-text-dark-grey w3-padding-16"><i class="fa fa-arrow-down"></i>&nbsp;&nbsp;Block  Cipher</h2>
+<hr><hr>
+<p class = "w3-large w3-text-dark-grey">A block cipher takes a block of plaintext bits and generates a block of ciphertext bits, generally of same size. The size of block is fixed in the given scheme. The choice of block size does not directly affect to the strength of encryption scheme. The strength of cipher depends up on the key length</p>
+
+<p class = "w3-large w3-text-dark-grey">There is a vast number of block ciphers schemes that are in use. Many of them are publically known. Most popular and prominent block ciphers are listed below.</p>
+    <ol>
+        <li>Digital Encryption Standard (DES) − The popular block cipher of the 1990s. It is now considered as a ‘broken’ block cipher, due primarily to its small key size.</li>
+        <li>Triple DES − It is a variant scheme based on repeated DES applications. It is still a respected block ciphers but inefficient compared to the new faster block ciphers available.</li>
+        <li>Advanced Encryption Standard (AES) − It is a relatively new block cipher based on the encryption algorithm Rijndael that won the AES design competition.</li>
+        <li>IDEA − It is a sufficiently strong block cipher with a block size of 64 and a key size of 128 bits. A number of applications use IDEA encryption, including early versions of Pretty Good Privacy (PGP) protocol. The use of IDEA scheme has a restricted adoption due to patent issues.</li>
+        <li>Twofish − This scheme of block cipher uses block size of 128 bits and a key of variable length. It was one of the AES finalists. It is based on the earlier block cipher Blowfish with a block size of 64 bits.</li>
+        <li>Serpent − A block cipher with a block size of 128 bits and key lengths of 128, 192, or 256 bits, which was also an AES competition finalist. It is a slower but has more secure design than other block cipher.</li>
+    </ol>
+
+<hr><hr>
+</div>
+<br>
+
+
+<!-- RSA -->
+<div id = "RSA">
+</div>
+<br><br><br>
+<div class = "w3-container w3-card w3-pale-green">
+<h2  class = "w3-text-dark-grey w3-padding-16"><i class="fa fa-spinner"></i>&nbsp;&nbsp;RSA</h2>
+<hr><hr>
+<p class = "w3-large w3-text-dark-grey">RSA (Rivest–Shamir–Adleman) is a public-key cryptography algorithm that is widely used for secure data transmission. It is named after its inventors, Ron Rivest, Adi Shamir, and Leonard Adleman, who developed it in 1977.</p>
+<p class = "w3-large w3-text-dark-grey">In RSA, a public key and a private key are used to encrypt and decrypt messages. The public key is used to encrypt the message, and the private key is used to decrypt it. The public key is made available to anyone who wants to send a message, while the private key is kept secret and is used only by the intended recipient of the message. This allows the recipient to decrypt the message and ensures that only they can read it.</p>
+<p class = "w3-large w3-text-dark-grey">RSA is widely used for secure communication over the internet, such as in secure web browsing and online transactions. It is also used to secure data transmission in other contexts, such as in email, file transfers, and virtual private networks (VPNs). RSA is considered to be a very secure encryption method, as it is currently considered to be impractical to break using known methods.</p>
+<p class = "w3-large w3-text-dark-grey">Here's how the RSA algorithm works:</p>
+<ol>
+   
+    <li>The sender generates a public key and a private key using a set of prime numbers. The public key is made available to anyone who wants to send a message, while the private key is kept secret and is used only by the intended recipient of the message.</li>
+    <li>The sender uses the recipient's public key to encrypt the message. The encrypted message is then sent to the recipient.</li>
+    <li>The recipient uses their private key to decrypt the message. This allows them to read the message and ensures that only they can read it.</li>
+</ol>
+<p class = "w3-large w3-text-dark-grey">RSA is considered to be a very secure encryption method, as it is currently considered to be impractical to break using known methods. It is widely used for secure communication over the internet, such as in secure web browsing and online transactions.</p>
+<hr><hr>
+</div>
+<br>
+
+
+ <!-- DSA -->
+<div id = "DSA">
+</div>
+<br><br><br>
+<div class = "w3-container w3-card w3-pale-green">
+<h2  class = "w3-text-dark-grey w3-padding-16"><i class="fa fa-refresh"></i>&nbsp;&nbsp;DSA</h2>
+<hr><hr>
+<p class = "w3-xlarge w3-text-dark-grey">The first part of the DSA algorithm is the public key and private key generation through some steps, which can be told as:</p>
+    <ol>
+        <li>Firstly, choose a prime number q, which is called the prime divisor in this.</li>
+        <li>Then, choose another primer number p, such that p-1 mod q = 0. p is called the prime modulus in this.</li>
+        <li>Then, choose an integer g, such that 1 < g < p, g**q mod p = 1 and g = h**((p–1)/q) mod p. q is also called g's multiplicative order modulo p in this algorithm.</li>
+        <li>Then, choose an integer, such that 0 < x < q for this.</li>
+        <li>  Now, compute y as g**x mod p.</li>
+        <li>Thus, Package the public key as {p,q,g,y} is this.</li>
+        <li>Thus, Package the public key as {p,q,g,y} is this.</li>
+        <li>And, Package the private key as {p,q,g,x} is this.</li>
+    </ol>
+<p class = "w3-xlarge w3-text-dark-grey">
+    Then, the second part of the DSA algorithm is the signature generation and signature verification in this algorithm, which can be told as:
+        </p>
+<p class = "w3-large w3-text-dark-grey">    Firstly, to generate a message signature, the sender can follow these further steps:
+</p>
+<ol>
+    <li>Firstly, generate the message digest h, using a hash algorithm like SHA1.</li>
+    <li> Then, generate a random number k, such that 0 < k < q.</li>
+    <li>Then, Computer as (g**k mod p) mod q. If r = 0, select a different k.</li>
+    <li>And, Compute i, such that k*i mod q = 1. i is called the modular multiplicative inverse of k modulo q in this.</li>
+    <li>Then, Compute s = i*(h+r*x) mod q. If s = 0, select a different k.</li>
+    <li>Thus, Package the digital signature as {r,s}.</li>
+</ol>
+<p class = "w3-large w3-text-dark-grey">Then, to verify a message signature, the receiver of the message and the digital signature can follow these further steps as:</p>
+<ol>
+    <li>Firstly, Generate the message digest h, using the same hash algorithm.</li>
+    <li>Then, Compute w, such that s*w mod q = 1. w is called the modular multiplicative inverse of s modulo q in this.</li>
+    <li>Then, Compute u1 = h*w mod q.</li>
+    <li>And, Compute u2 = r*w mod q.</li>
+    <li>Then, Compute v = (((g**u1)*(y**u2)) mod p) mod q.</li>
+    <li>Wherever, If v == r, the digital signature is valid.</li>
+</ol>
+<hr><hr>
+</div>
+
+<br>
+
+
+<!-- Steganography -->
+<div id ="Steganography"></div>
+<br><br><br>
+<div class = "w3-container w3-card w3-pale-green">
+<h2  class = "w3-text-dark-grey w3-padding-16"><i class="fa fa-wrench"></i>&nbsp;&nbsp;Steganography</h2>
+<hr><hr>
+<p class = "w3-large w3-text-dark-grey">A steganography technique involves hiding sensitive information within an ordinary, non-secret file or message, so that it will not be detected. The sensitive information will then be extracted from the ordinary file or message at its destination, thus avoiding detection. Steganography is an additional step that can be used in conjunction with encryption in order to conceal or protect data.</p>
+
+<p class = "w3-xlarge w3-text-dark-grey">Different Types of Steganography</p> 
+<p class = "w3-large w3-text-dark-grey">1. Text Steganography − There is steganography in text files, which entails secretly storing information. In this method, the hidden data is encoded into the letter of each word. </p>
+
+<p class = "w3-large w3-text-dark-grey"> 2. Image Steganography − The second type of steganography is image steganography, which entails concealing data by using an image of a different object as a cover. Pixel intensities are the key to data concealment in image steganography.</p>
+
+<p class = "w3-large w3-text-dark-grey">Since the computer description of an image contains multiple bits, images are frequently used as a cover source in digital steganography. </p> 
+
+
+<p class = "w3-large w3-text-dark-grey">3. Audio Steganography − It is the science of hiding data in sound. Used digitally, it protects against unauthorized reproduction. Watermarking is a technique that encrypts one piece of data (the message) within another (the "carrier"). Its typical uses involve media playback, primarily audio clips.</p>
+
+
+<p class = "w3-large w3-text-dark-grey"> 4. Video Steganography − Video steganography is a method of secretly embedding data or other files within a video file on a computer. Video (a collection of still images) can function as the "carrier" in this scheme. Discrete cosine transform (DCT) is commonly used to insert values that can be used to hide the data in each image in the video, which is undetectable to the naked eye. Video steganography typically employs the following file formats: H.264, MP4, MPEG, and AVI.
+</p>
+ <p class = "w3-large w3-text-dark-grey">  5. Network or Protocol Steganography − It involves concealing data by using a network protocol like TCP, UDP, ICMP, IP, etc., as a cover object. Steganography can be used in the case of covert channels, which occur in the OSI layer network model.</p>
+
+
+ <p class = "w3-xlarge w3-text-dark-grey">Steganography Examples Include</p> 
+<p class = "w3-large w3-text-dark-grey">➡ Writing with invisible ink</p>
+<p class = "w3-large w3-text-dark-grey">➡ Embedding text in a picture (like an artist hiding their initials in a painting they’ve done </p>
+<p class = "w3-large w3-text-dark-grey">➡ Backward masking a message in an audio file (remember those stories of evil messages recorded backward on rock and roll records?)</p>
+
+<hr><hr>
+</div>
+<br>
+
+</div>
+</div>
+</body>
+</html>
+

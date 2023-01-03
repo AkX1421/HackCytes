@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>HackCytes</title>
+	<link rel="icon" href="Images/back.jfif">
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<style>
+		header {
+			background-image: url("Images/back1.jpg");
+			background-repeat: no-repeat;
+			background-position: center;
+			background-attachment: fixed;
+			background-size: cover;
+			height: 600px;
+		}
+
+		div {
+			text-align: justify;
+		}
+
+		.uplinks {
+			margin: 2%;
+			text-align: center;
+			color: #f1eef3;
+		}
+
+		.uplinks:hover {
+			color: #3eade9;
+			text-decoration: underline;
+		}
+
+		.typewrite {
+			text-decoration: none;
+		}
+
+		.width {
+			width: 10%;
+		}
+
+		.width2 {
+			width: 50%;
+		}
+
+		.image {
+			width: 100%;
+			height: 100%;
+			padding: 20px;
+			margin: 10px;
+		}
+
+		.text {
+			margin: 5%;
+			padding: 1%;
+		}
+
+		.image2 {
+			width: 100%;
+			height: 600px;
+			padding: 20px;
+			margin: 10px;
+		}
+
+		.footlink {
+			font-size: 50px;
+			display: inline-block;
+			transition: transform .01s;
+			margin: 2%
+		}
+
+		.whats:hover {
+			color: #25D366;
+			transform: scale(2.5);
+		}
+
+		.face:hover {
+			color: #3b5998;
+			transform: scale(2.5);
+		}
+
+		.insta:hover {
+			color: #E1306C;
+			transform: scale(2.5);
+		}
+
+		.tele:hover {
+			color: #0088cc;
+			transform: scale(2.5);
+		}
+
+
+		.mobi:hover {
+			color: #833AB4;
+			transform: scale(2.5);
+		}
+
+		.design {
+			padding-top: 200px;
+			padding-left: 40px;
+		}
+
+		.height {
+			height: 500px;
+		}
+
+	</style>
+
+	<script type="text/javascript" id="botcopy-embedder-d7lcfheammjct" class="botcopy-embedder-d7lcfheammjct"
+		data-botId="63a9aec7593b0b0008f2650d">
+			var s = document.createElement( 'script' );
+			s.type = 'text/javascript'; s.async = true;
+			s.src = 'https://widget.botcopy.com/js/injection.js';
+			document.getElementById( 'botcopy-embedder-d7lcfheammjct' ).appendChild( s );
+		</script>
+
+<body style="background-color:rgb(16, 16, 16);">
+	<header>
+		<p class="w3-left w3-xlarge uplinks"><a href="Labs/login.php" style="text-decoration: none">Login</a></p>
+		<p class="w3-left w3-xlarge uplinks"><a href="Labs/register.html" style="text-decoration: none">Sign Up</a></p>
+		<p class="w3-left w3-xlarge uplinks"><a href="Labs/" style="text-decoration: none">Labs</a>
+
+		</p>
+
+
+		<div class="w3-center w3-text-white width2">
+			<h1 class="design">
+
+				<a href="" class="w3-xxxlarge typewrite">Kick start cyber security journey today!</a>
+				<br>
+
+				<a href="" class="w3-xxxlarge typewrite">Choose us to&nbsp;</a>
+
+				<a href="" class="w3-xxxlarge typewrite" data-period="1000"
+					data-type='[ "Learn from scratch!", "Accelerate your career!", "Learn through solving labs!"]'>
+					<span class="wrap"></span>
+				</a>
+			</h1>
+			<script>
+				var TxtType = function ( el, toRotate, period ) {
+					this.toRotate = toRotate;
+					this.el = el;
+					this.loopNum = 0;
+					this.period = parseInt( period, 10 ) || 2000;
+					this.txt = '';
+					this.tick();
+					this.isDeleting = false;
+				};
+
+				TxtType.prototype.tick = function () {
+					var i = this.loopNum % this.toRotate.length;
+					var fullTxt = this.toRotate[i];
+
+					if ( this.isDeleting ) {
+						this.txt = fullTxt.substring( 0, this.txt.length - 1 );
+					} else {
+						this.txt = fullTxt.substring( 0, this.txt.length + 1 );
+					}
+
+					this.el.innerHTML = '<span class="wrap">' + this.txt + '</span>';
+
+					var that = this;
+					var delta = 200 - Math.random() * 100;
+
+					if ( this.isDeleting ) { delta /= 2; }
+
+					if ( !this.isDeleting && this.txt === fullTxt ) {
+						delta = this.period;
+						this.isDeleting = true;
+					} else if ( this.isDeleting && this.txt === '' ) {
+						this.isDeleting = false;
+						this.loopNum++;
+						delta = 500;
+					}
+
+					setTimeout( function () {
+						that.tick();
+					}, delta );
+				};
+
+				window.onload = function () {
+					var elements = document.getElementsByClassName( 'typewrite' );
+					for ( var i = 0; i < elements.length; i++ ) {
+						var toRotate = elements[i].getAttribute( 'data-type' );
+						var period = elements[i].getAttribute( 'data-period' );
+						if ( toRotate ) {
+							new TxtType( elements[i], JSON.parse( toRotate ), period );
+						}
+					}
+					// INJECT CSS
+					var css = document.createElement( "style" );
+					css.type = "text/css";
+					css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #5680E9}";
+					document.body.appendChild( css );
+				};
+
+			</script>
+		</div>
+
+	</header>
+	<br><br>
+	<div class="w3-full" id="codiac">
+		<div class="w3-half w3-card-4 w3-black height">
+			<p class="w3-text-blue w3-xxlarge text">What is HackCytes?</p>
+			<p class="w3-text-white w3-xlarge text">One-stop solution to interactively learn Cyber Security from
+				stratch.
+				We offer different topics which a cyber security enthusiast should know.
+			</p>
+
+		</div>
+
+
+		<div class="w3-half height">
+			<img src="Images/logo.jpg" class="image">
+		</div>
+
+	</div>
+
+
+
+	<div class="w3-full">
+
+		<div class="w3-half">
+			<img src="Images/intro.jpg" class="image2 height">
+		</div>
+
+		<div class="w3-half" id="offer">
+			<div class="image2 w3-card-4 w3-black height">
+				<p class="w3-text-blue w3-xxlarge text">Introduction</p>
+				<p class="w3-text-white w3-xlarge text w3-text-white">Cybersecurity refers to a set of techniques used
+					to protect the integrity of networks, programs and data from attack, damage or unauthorized access.
+					<br><br>
+				<p class="w3-text-white w3-xlarge text w3-text-white">
+					Click <A href='intro.html'>here</A> to get started with Cyber Security.</p>
+
+				</p>
+
+			</div>
+		</div>
+
+
+		<div class="w3-full">
+			<div class="w3-half">
+				<div class="image2 w3-card-4 w3-black height">
+					<p class="w3-text-blue w3-xxlarge text">Cryptography</p>
+					<p class="w3-text-white w3-xlarge text">The art of concealing information to induce secrecy in the
+						communication and transmission of sensitive data is termed cryptography.
+					</p>
+					<p class="w3-text-white w3-xlarge text w3-text-white">
+						Click <A href='crypto.html'>here</A> to get started with Cryptography.</p>
+
+					</p>
+				</div>
+			</div>
+
+			<div class="w3-half">
+				<img src="Images/cry.jpg" class="height image2">
+			</div>
+		</div>
+
+
+		<div class="w3-full">
+			<div class="w3-half">
+				<img src="Images/app.jpg" class="height image2">
+			</div>
+
+			<div class="w3-half h">
+				<div class="image2 w3-card-4 w3-black height">
+					<p class="w3-text-blue w3-xxlarge text">Application Security</p>
+					<p class="w3-text-white w3-xlarge text">Application security is the process of developing, adding,
+						and testing security features within applications to prevent security vulnerabilities against
+						threats such as unauthorized access and modification.
+					</p>
+					<p class="w3-text-white w3-xlarge text w3-text-white">
+						Click <A href='Appsec.html'>here</A> to get started with Application Security.</p>
+
+					</p>
+				</div>
+			</div>
+		</div>
+
+
+		<div class="w3-full">
+			<div class="w3-half">
+				<div class="image2 w3-card-4 w3-black height">
+					<p class="w3-text-blue w3-xxlarge text">Ethical Hacking</p>
+					<p class="w3-text-white w3-xlarge text">Ethical hacking is to scan vulnerabilities and to find
+						potential threats on a computer or networks. An ethical hacker finds the weak points or
+						loopholes in a computer, web applications or network and reports them to the organization.
+					</p>
+					<p class="w3-text-white w3-xlarge text w3-text-white">
+						Click <A href='Ethicalhacking.html'>here</A> to get started with Ethical Hacking</p>
+
+					</p>
+				</div>
+			</div>
+			<div class="w3-half">
+				<img src="Images/ethi.png" class="image2 height">
+			</div>
+		</div>
+
+
+		<div class="w3-full">
+			<div class="w3-half">
+				<img src="Images/back.jpg" class="image2 height">
+			</div>
+
+			<div class="w3-half h">
+				<div class="image2 w3-card-4 w3-black height">
+					<p class="w3-text-blue w3-xxlarge text">Network Security</p>
+
+					<p class="w3-text-white w3-xlarge text">Network Security protects your network and data from
+						breaches, intrusions and other threats. It describes
+						hardware and software solutions as well as processes or rules and configurations relating to
+						network use, accessibility, and overall threat protection.
+					</p>
+					<p class="w3-text-white w3-xlarge text w3-text-white">
+						Click <A href='Networksec.html'>here</A> to get started with Network Security.</p>
+
+					</p>
+				</div>
+			</div>
+		</div>
+
+
+
+		<div class="w3-full">
+			<div class="w3-half">
+				<div class="image2 w3-card-4 w3-black height">
+					<p class="w3-text-blue w3-xxlarge text">Data Security</p>
+					<p class="w3-text-white w3-xlarge text">Data Security refers to the set of practices and standards
+						we use to protect digital information from accidental or unauthorized access, changes, and
+						disclosure during its lifecycle.
+					</p>
+					<p class="w3-text-white w3-xlarge text w3-text-white">
+						Click <A href='datasec.html'>here</A> to get started with Data Security.</p>
+
+					</p>
+				</div>
+			</div>
+			<div class="w3-half">
+				<img src="Images/data.jpg" class="image2 height">
+			</div>
+
+
+
+			<div class="w3-half">
+				<img src="Images/forum.png" class="height image2">
+			</div>
+
+			<div class="w3-half h">
+				<div class="image2 w3-card-4 w3-black height">
+					<p class="w3-text-blue w3-xxlarge text">Discussion Forum</p>
+					<p class="w3-text-white w3-xlarge text">Learning is a team sport! <br>
+						<br>You don’t need to struggle alone anymore! <br>
+						<br>HackCytes allows you to share your queries and receive support.
+					</p>
+					<p class="w3-text-white w3-xlarge text w3-text-white">
+						Click <A href='forum/index.php'>here</A> to go to the Discussion Forum.</p>
+
+					</p>
+				</div>
+			</div>
+		</div>
+
+		<br><br>
+		<div>
+			<div class="w3-full">
+				<div class="w3-half">
+					<div class="image2 w3-card-4 w3-black height">
+						<p class="w3-text-blue w3-xxlarge text">FAQs</p>
+						<p class="w3-text-white w3-xlarge text">Have a doubt about how we work?<br>
+							<br>Click <A href='excel.html'>here</A> to know about how we function.
+						</p>
+
+					</div>
+				</div>
+
+				<div class="w3-half">
+					<img src="Images/9.png" class="height image2">
+				</div>
+			</div>
+
+			<div class="w3-full">
+
+				<div class="w3-half">
+					<img src="Images/query.jpg" class="height image2">
+				</div>
+
+				<div class="w3-half h">
+					<div class="image2 w3-card-4 w3-black height">
+						<p class="w3-text-blue w3-xxlarge text">Have a Query?</p>
+						<p class="w3-text-white w3-xlarge text">
+							<br>Click <A href='contact.html'>here</A> to send us your query. We will get back soon!
+						</p>
+
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<p class="w3-xxxlarge w3-center"><span class="foot">&nbsp;&nbsp;</span></p>
+		<div class="w3-blue">
+			<br>
+			<p class="w3-xxxlarge w3-center">
+				<span class="foot">Contact Us</span>
+			</p>
+			<div class="w3-xxxlarge w3-center">
+				<div class="w3-center footlink whats"><a href="https://wa.me/+919511846735"
+						style="text-decoration: none"><i class="fa fa-whatsapp"></i></a></div>
+				<div class="w3-center footlink face"><a href="https://www.facebook.com/vishwakarmauniversity/"
+						style="text-decoration: none"><i class="fa fa-facebook"></i></a></div>
+
+				<div class="w3-center footlink tele"><a href="https://www.linkedin.com/in/nimisha-doshi-1675401a7/"
+						style="text-decoration: none"><i class="fa fa-linkedin"></i></a></div>
+				<div class="w3-center footlink insta"><a href="https://www.instagram.com/vishwakarmauniversity/"
+						style="text-decoration: none"><i class="fa fa-instagram"></i></a></div>
+				<div class="w3-center footlink mobi"><a href="tel:+919999999999" style="text-decoration: none"><i
+							class="fa fa-mobile"></i></a></div>
+			</div>
+			<br>
+		</div>
+	</div>
+
+</body>
+
+</html>
